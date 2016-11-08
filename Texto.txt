@@ -1,0 +1,61 @@
+Título: Detecção e monitoramento de vagas de estacionamento através de visão computacional
+
+Colocar aquele roteiro da apresentação.
+
+Problema: Há uma falta no mercado de sistemas que sejam capazes de monitorar e gerenciar vagas em
+estacionamentos abertos.
+
+Hipótese: Utilizar algoritmos de visão computacional é uma solução barata, eficiente e eficaz para esse
+monitoramento.
+
+Motivação: 
+	Rondar estacionamentos em busca de vagas gasta tempo e dinheiro.
+	Soluções que existem atualmentes não são adequadas para estacionamentos abertos.
+	Automatizar a gerência e monitoramento de espaços com estacionamento rotativo.
+
+Objetivo Geral: Desenvolver um sistema capaz de analisar imagens de uma câmera de vídeo para identificar
+	vagas vazias e ocupadas em um estacionamento descoberto e informar aos usuários do estacionamento
+
+Objetivos Específicos: Detectar automaticamente as vagas do estacionamento.
+		       Determinar informações adicionais sobre o estacionamento
+		       Fornecer funções para automatizar a gerência de estacionamentos rotativos.
+
+Resultados Esperados: Um sistema barato e eficiente que seja capaz de facilitar a vida de usuários de
+estacionamentos e automatizar a gerência em estacionamentos rotativos.
+	
+
+Revisão Teórica:
+	Primeiro Slide: Processamento de imagens.
+	Área da computação derivada do processamento de sinais.
+	Aprimoramento de imagens para interpretação humana
+	Algoritmos para análise automática de informações em uma imagem.(Visão computacional)
+
+	Segundo Slide: Subtração de imagens
+	Uma imagem é representada por um conjunto de pixels em um espaço cartesiano
+	Consiste em extrair uma imagem  de diferença entre duas imagens através da subtração de valores
+	nas mesmas coordenadas
+	D(x,y) = A(x,y) - B(x,y)
+	Usada para extrair diferenças entre quadros
+
+	
+	Terceiro Slide: Geração de fundo
+	Processo que envolve separação entre o foreground e o background de um video.
+	Background - Objetos estáticos
+	Foreground - Objetos em movimento
+
+Metodologia:
+	Aquisição de imagens para testes.
+	Geração de fundo de forma dinâmica.
+	Subtração entre fundos de momentos distintos
+	Identificação de novos objetos
+
+Cronograma:
+	Pesquisa bibliográfica: Janeiro, Fevereiro
+	Aquisição de imagens para testes: Fevereiro, Março
+	Implementação do programa: Fevereiro, Março, Abril
+	Validação: Abril, Maio
+	Análise de resultados: Abril, Maio, Junho
+	Escrita da monografia: Maio, Junho
+	Defesa da monografia: Julho
+
+		
