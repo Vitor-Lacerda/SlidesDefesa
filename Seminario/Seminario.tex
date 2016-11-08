@@ -58,7 +58,8 @@
 
 \graphicspath{ {imagens/} }
 
-
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
 
 %-----SLIDE DO TITULO-----%
 
@@ -87,60 +88,12 @@
 
 \AtBeginSection[]
 {
-\begin{frame}{Table of Contents}
+\begin{frame}{Roteiro}
 \tableofcontents[currentsection]
 \end{frame}
 }
 
 %-----APRESENTACAO MESMO------%
-
-
-\section{Revisão Teórica}
-\begin{frame}
-\frametitle{Processamento de Imagens}
-\begin{itemize}
-  \item Área da computação derivada do processamento de sinais.
-  \item Aprimoramento de imagens para interpretação humana
-  \item Algoritmos para análise automática de informações em uma imagem.(Visão computacional)
-\end{itemize}
-
-\end{frame}
-\begin{frame}
-\frametitle{Subtração de imagens}
-\begin{itemize}
-  \item Uma imagem é representada por um conjunto de pixels em um espaço cartesiano
-  \item Consiste em extrair uma imagem  de diferença entre duas imagens através da subtração de valores nas mesmas coordenadas
-  \item Usada para extrair diferenças entre quadros
-\end{itemize}
-
-\begin{equation}\label{diferenca}
-  D(x,y) = A(x,y) - B(x,y)
-\end{equation}
-
-\end{frame}
-\begin{frame}
-\frametitle{Geração de fundo}
-\begin{itemize}
-  \item Processo que envolve separação entre o foreground e o background de um video.
-  \item Background - Objetos estáticos
-  \item Foreground - Objetos em movimento
-\end{itemize}
-
-\end{frame}
-\begin{frame}
-\frametitle{Histogramas}
-\begin{block}{Histograma}
-Uma representação da distribuição dos valores dos pixels de uma imagem. Normalmente representado com um gráfico de barras.
-\end{block}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=.4\textwidth]{Histograma2}
-\end{figure}
-
-\end{frame}
-
-
 
 \section{Problema e motivação}
 
@@ -148,7 +101,7 @@ Uma representação da distribuição dos valores dos pixels de uma imagem. Norm
 \frametitle{Problema}
 
 \begin{block}{Problema}
-    Há uma falta no mercado de sistemas que sejam capazes de monitorar e gerenciar vagas em estacionamentos ao ar livre.
+    Procurar vagas em grandes estacionamentos é uma tarefa dispendiosa e que consome muito tempo.
 \end{block}
 \end{frame}
 
@@ -157,8 +110,8 @@ Uma representação da distribuição dos valores dos pixels de uma imagem. Norm
  \begin{itemize}
    \item  As soluções para estacionamento fechados não são utilizadas nos estacionamentos abertos porque são caras, difíceis de instalar e de difícil escalabilidade.
    \item  Utilizar algoritmos de visão computacional é uma solução barata, eficiente e eficaz para realizar esse monitoramento.
-   \item  É possível utilizar técnicas de geração de fundo para separar veículos em movimento
-   \item  É possível usar essa informação e diferenças entre fundos para determinar estados de vagas de estacionamento.
+   \item  Redes Neurais Artificiais são capazes de diferenciar entre vagas ocupadas e vagas livres.
+   \item  Detecção de movimento pode determinar quando um veículo estacionou em uma vaga.
  \end{itemize}
 \end{frame}
 
@@ -167,8 +120,7 @@ Uma representação da distribuição dos valores dos pixels de uma imagem. Norm
 Motivações para o trabalho:
 \begin{itemize}
   \item Financeira: Rondar estacionamentos em busca de vagas gasta tempo e dinheiro.
-  \item Comercial: Sistema atrai clientes e automatiza gerência de estacionamentos rotativos.
-  \item Mercado: Soluções que existem atualmentes não são adequadas para estacionamentos abertos.
+  \item Comercial: Sistema atrai clientes para estabelecimentos que o adotarem.
 \end{itemize}
 
 \end{frame}
@@ -178,7 +130,7 @@ Motivações para o trabalho:
 \begin{frame}
 \frametitle{Objetivos}
 \begin{block}{Objetivo Geral}
-Desenvolver um sistema capaz de analisar imagens de uma câmera de vídeo para identificar vagas vazias e ocupadas em um estacionamento descoberto e informar aos usuários e donos do estacionamento.
+Desenvolver um sistema capaz de analisar imagens de uma câmera de vídeo para identificar vagas vazias e ocupadas em um estacionamento descoberto e ajudar motoristas a estacionar seus carros mais rapidamente.
 \end{block}
 
 \end{frame}
@@ -186,20 +138,306 @@ Desenvolver um sistema capaz de analisar imagens de uma câmera de vídeo para i
 \frametitle{Objetivos}
 Objetivos específicos:
 \begin{itemize}
-  \item Detectar automaticamente as vagas do estacionamento.
-  \item Determinar informações adicionais sobre o estacionamento
-  \item Fornecer funções para automatizar a gerência de estacionamentos rotativos.
+  \item Mapear automaticamente as posições das vagas do estacionamento com mínima marcação de humanos.
+  \item Informar aos motoristas a quantidade de vagas livres e ocupadas em uma região do estacionamento.
+  \item Funcionar mesmo se a execução for iniciada em estacionamento ocupado.
 \end{itemize}
 
 \end{frame}
 \begin{frame}
 \frametitle{Objetivos}
 \begin{block}{Resultado Esperado}
-Um sistema barato e eficiente que seja capaz de facilitar a vida de usuários de estacionamentos e automatizar a gerência em estacionamentos rotativos.
+Um sistema barato e eficiente que seja capaz de facilitar a tarefa de encontrar vagas em grandes estacionamentos descobertos, sem o uso de sensores ou necessidade de grandes obras para instalação.
 \end{block}
 \end{frame}
 
 
+\section{Fundamentação Teórica}
+\begin{frame}
+\frametitle{Imagens em nível de cinza}
+\begin{itemize}
+  \item É necessário um modelo de representação de imagens em computadores.
+  \item Forma mais simples são imagens de nível de cinza.
+  \item Matriz $MxN$ de elementos de $1 bit$ que representam a luminosidade do \textit{pixel}.
+\end{itemize}
+
+\begin{figure}
+ \centering
+ \begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{ExemploNivelCinza}
+  \caption{}
+  \label{exemplo:sfig2}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{MatrizNivelCinza}
+  \caption{}
+  \label{exemplo:sfig1}
+\end{subfigure}%
+\end{figure}
+
+
+\end{frame}
+\begin{frame}
+\frametitle{Espaços de cor}
+\begin{itemize}
+  \item Modelos de representação de cores.
+  \item RGB e YCbCr.
+  \item Ambos compostos de três canais.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{RGB}
+\begin{itemize}
+  \item Canais vermelho(R), verde(G) e azul(B).
+  \item Matrizes contém fatores de influência de cada cor na imagem final.
+\end{itemize}
+
+	\begin{equation}
+			C_{i,j} = p_{i,j,1} . R + p_{i,j,2} . G + p_{i,j,3} . B ,  (1<i<M, 1<j<N)
+	\label{eq:corRGB}
+	\end{equation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{RGB}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\textwidth]{exemploRGBFinal}
+  \caption{Uma imagem RGB e seus três canais separados.}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{YCbCr}
+\begin{itemize}
+\item Usado em vídeos por sua capacidade de compressão.
+\item Canais de luminância(Y), crominância azul(Cb) e crominância vermelha(Cr).
+\item Pode ser obtida através da imagem RGB.
+\item Canais de crominância são gerados pela diferença entre Y e canais R e B. 
+\end{itemize}
+
+\begin{equation}
+	Y = 0,299.R + 0,587.G + 0,114.B
+\label{eq:Y}
+\end{equation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{YCbCr}
+\begin{figure}
+ \centering
+ \begin{subfigure}{.2\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{exemploRGB}
+\end{subfigure}\
+\begin{subfigure}{.2\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{exemploycbcr}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\linewidth]{exemploYCbCrFinal}
+  \caption{A imagem YCbCr obtida de uma imagem RGB e seus canais.}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Descritores de textura}
+\begin{block}{}
+Algoritmos que retorna valores que representam padrões de uma imagem analisada. Analisam a imagem como um todo, ao invés de \textit{pixel-a-pixel}.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{GLCM}
+\begin{itemize}
+\item \textit{Gray Level Co-ocurrence Matrix}.
+\item Aplicada em imagens de nível de cinza.
+\item Medidas estatísticas.
+\item Analisa uma certa relação espacial entre dois \textit{pixels}.
+\item Para este trabalho, a relação é a vizinhança direita.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{GLCM}
+\begin{itemize}
+\item Saída do algoritmo é uma matriz $MxM$ onde $M$ é o maior nível de cinza possível.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[width=7cm]{GLCM} 
+\centering
+\caption{Exemplo da elaboração da GLCM. Extraída de https://www.mathworks.com/help/images/ref/graycomatrix.html}
+\label{fig:GLCM}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{GLCM}
+\begin{block}{Medidas}
+\begin{itemize}
+\centering
+\item[Contraste:] $C = \sum_{i,j} (i-j)^{2}P_{(i,j)}$
+\item[Correlação:] $Co = \sum_{i,j} \frac{(i - \mu_i)(j - \mu_j)P_{(i,j)}}{\sigma_i\sigma_j}$
+\item[Energia:]$E = \sum_{i,j} P_{(i,j)}^{2}$
+\item[Homogeneidade:]$H = \sum_{i,j} \frac{P_{(i,j)}}{1+|i-j|}$
+\centering
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeos}
+\begin{block}{Vídeo}
+Representação de cenas dinâmicas do mundo real. A sensação de movimento é criada através da exibição de imagens digitais a uma taxa adequada.
+\end{block}
+
+\begin{block}{Detecção de Movimento}
+Análise da diferença entre dois quadros para estimar a movimentação de objetos na cena.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fluxo óptico}
+\begin{itemize}
+\item Estimativa da velocidade do movimento de cada \textit{pixel} da imagem.
+\item $I(x,y,t) = I(x+dx, y+dy, t+dt)$
+\item Restrição do Fluxo óptico: $\nabla Iv + I_t = 0$.
+\item É preciso analisar a vizinhança para encontrar ambos os componentes de $v$.
+\item Método Lucas-Kanade: vizinhança local.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fluxo óptico}
+\begin{figure}
+ \centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{velocidadevetores}
+	\caption{}
+\end{subfigure}\
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{velocidademagnitude}
+	\caption{}
+\end{subfigure}
+\caption{(a) Representação dos vetores de velocidade estimado pelo fluxo óptico. (b) Imagem em níveis de cinza onde a intensidade do \textit{pixel} representa a magnitude do seu vetor de velocidade.}
+\end{figure}
+\end{frame}
+
+\section{Redes Neurais Artificiais}
+
+\begin{frame}
+\frametitle{Redes Neurais Artificias}
+\begin{block}{Redes Neurais}
+Sistemas inspirados no cérebro humano para realização de tarefas como classificação de padrões e ajuste de funções. Usam elementos de processamento distintos que trabalham paralelamente(neurônios).
+\end{block}
+
+\begin{block}{Haykin define como:}
+ "...um processador distribuído massivamente paralelo composto por unidades simples de processamento, que possui uma propensidade natural a armazenar conhecimento experimental e torná-lo disponível para uso."
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Neurônio}
+\begin{figure}
+\centering
+\includegraphics[width=.6\textwidth]{neuronio}
+\caption{A estrutura básica de um neurônio humano}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Neurônio Artificial}
+\begin{figure}
+\centering
+\includegraphics[width=.6\textwidth]{NeuronioArtificial}
+\caption{A estrutura básica de um neurônio artificial}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Arquitetura \textit{Feed-forward}}
+\begin{itemize}
+\item Arquitetura para organização dos neurônios de uma rede neural artificial.
+\item Camada de entrada, camadas ocultas e camada de saída.
+\item Informação flui apenas no sentido entrada-saída.
+\item Cada neurônio de uma camada é ligado a todos da camada seguinte.
+\item Não há ligação entre neurônios de uma mesma camada.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Arquitetura \textit{Feed-forward}}
+\begin{figure}
+\centering
+\includegraphics[width=.3\textwidth]{feedforward}
+\caption{A arquitetura feed-forward. Adaptada de \cite{Haykin}}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Treinamento}
+\begin{itemize}
+\item Processo onde a rede é configurada para realizar a tarefa específica para qual foi criada.
+\item Aprendizado: capacidade da rede de aproximar o comportamento das entradas durante o treinamento.
+\item Generalização: capacidade da rede de prever e operar sobre entradas que não estavam no conjunto de treinamento.
+\item Valores dos pesos $w$ e dos deslocamentos $b$ são definidos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Treinamento}
+\begin{itemize}
+\item \textbf{Conjunto de treinamento:} Conjunto utilizado para a calibração dos valores de $w$ e $b$.
+\item \textbf{Conjunto de validação:} Após cada iteração do treinamento, a rede valida os valores configurados usando este conjunto.
+\item \textbf{Conjunto de testes:} A rede é apresentada a este conjunto ao final do treinamento para verificação do funcionamento.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Treinamento}
+\begin{block}{Treinamento Supervisionado}
+Elementos dos conjuntos de treinamento e validação são as entradas e os gabaritos da saídas desejadas de cada entrada. Treina até que a saída seja suficientemente próxima do gabarito.
+\end{block}
+
+\begin{block}{Treinamento Não-Supervisionado}
+A rede recebe um conjunto de entradas e aprende características intrínsecas dos dados apresentados.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Classificação de padrões}
+\begin{itemize}
+\item Consiste em analisar padrões de um conjunto de dados e designar o conjunto a uma classe pré-determinada.
+\item A rede analisa características ou \textit{features}.
+\item \textit{Features} devem ser descritivos e discriminantes.
+\item Limiar de decisão.
+\item A rede determina a probabilidade de que uma entrada pertença a uma classe.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Classificação de padrões}
+\begin{figure}
+\centering
+\includegraphics[width=5cm]{features}
+\label{fig:features}
+\caption{Um gráfico que mostra duas características $\tilde{x}_1$ e $\tilde{x}_2$ de um problema de classificação hipotético. Extraída de \cite{NNForPR}.}
+\end{figure}
+\end{frame}
 
 
 \section{Metodologia}
