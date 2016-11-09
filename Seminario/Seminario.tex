@@ -440,98 +440,171 @@ A rede recebe um conjunto de entradas e aprende características intrínsecas do
 \end{frame}
 
 
-\section{Metodologia}
+\section{Solução proposta}
 
 \begin{frame}
-\frametitle{Metodologia}
-    \begin{block}{Aquisição das imagens}
-    Os primeiros testes do trabalho serão feitos sobre imagens criadas artificialmente. Alguns em imagens estáticas e outros em vídeos criados através de manipulação de imagens. Futuramente, vídeos reais serão analisados.
-    \end{block}
+\frametitle{Fluxograma}
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth, height=.8\textheight]{fluxograma}
+	\centering
+\end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Metodologia}
-    Passos de funcionamento do programa:
-    \begin{itemize}
-        \item Extração do fundo
-        \item Subtração de fundos distintos
-        \item Identificação de objetos
+\frametitle{Aquisição}
+    \begin{block}{}
+    Imagens de câmeras montadas em postes de luz ou similar.
+    \end{block}
+\begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{Vazio3}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regiões de interesse}
+\begin{block}{}
+\begin{itemize}
+\item Definidas no momento de instalação.
+\item Não devem ter intersecção.
+\item Regiões onde há vagas na imagem.
+\end{itemize} 
+\end{block}
+\begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{ROIs}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Seções verticais}
+\begin{block}{}
+Cada ROI é dividida em um número igual de seções verticais.
+\end{block}
+\begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{Secoes}
+	\centering
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Classificação das seções}
+	A classificação tem 4 etapas:
+   \begin{itemize}
+      \item Extração das características.
+      \item Classificação pela Rede Neural.
+      \item Ajuste pelos vizinhos.
+      \item Sistema de votação
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Metodologia}
-O fundo deve ser gerado de forma dinânica por causa das seguintes dificuldades:
+\frametitle{Extração das características}
+Imagens individuais de cada seção são extraídas.
+\begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{imgSecao}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extração das características}
 \begin{itemize}
-  \item Mudança na iluminação durante o dia
-  \item Ruído da imagem
-  \item Clima
-  \item Objetos novos que podem se integrar ao fundo
+\item Medidas GLCM: $\begin{pmatrix}
+	Contraste\\Correlação\\Energia\\Homogeneidade
+	\end{pmatrix}$
+\item Médias dos canais de crominância: $\begin{pmatrix}
+	MCb\\MCr
+	\end{pmatrix}$
+\item Vetor final de entrada: $\begin{pmatrix}
+	Contraste\\Correlação\\Energia\\Homogeneidade\\MCb\\MCr
+	\end{pmatrix}$
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Classificação da Rede Neural Artificial}
+   \begin{itemize}
+   \item Duas classes possíveis: carro(1) ou vaga (2).
+   \item Rede neural recebe vetor de entrada e retorna vetor com probabilidade de cada classe.
+   \end{itemize}
+  \begin{equation}
+	\centering	
+	\begin{pmatrix}
+	P_1\\P_2
+	\end{pmatrix}  
+	\centering
+  \end{equation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Ajuste dos vizinhos}
+
+A classe das seções vizinhas influência a classificação de uma seção de acordo com as equações:
+
+   \begin{equation}
+	f(s,v) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp^{\frac{-(i_s-i_v)^2}{2\sigma^2}} 
+	\end{equation}
+
+\begin{equation}
+	P_{cv}  = P_{cv}(1+f(s,v))
+\end{equation}
+
+\begin{equation}
+	P_{\overline{cv}}  = P_{\overline{cv}}(1-f(s,v))
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ajuste dos Vizinhos}
+  \begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{Influencia}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ajuste dos Vizinhos}
+  Ajuda a evitar erros como este:
+  \begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{erroMeio}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sistema de votação}
+\begin{itemize}
+\item Votação define se a seção está estabilizada ou não.
+\item Voto é baseado no vetor de probabilidades modificado pelo ajuste dos vizinhos.
+\item $voto= 
+\begin{cases}
+    1,& \text{se } P_1 >= 0,6\\
+    2,& \text{caso contrário}
+\end{cases}$.
+\item Seção não muda de classe se estiver estabilizada.
+\item Evitar flutuações na ocupação das seções.
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Metodologia}
-    Começa de um fundo inicial.
-    Gera o fundo a cada quadro de vídeo segundo a equação:
-    \begin{equation}\label{geracaoFundoEquacao}
-       Bgi = \left\{
-        \begin{array}{l l}
-        Ba_{i} & \text{,Fgi=255} \\
-        \frac{Bai}{2} + \frac{Qi}{2} & \text{,Fgi=0}\\
-         \end{array} \right.
-     \end{equation}
-\end{frame}
+\frametitle{Sistema de votação}
+  \begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{fluxogramaVotos}
+	\centering
+\end{figure}
 
-\begin{frame}
-\frametitle{Metodologia}
-   \begin{figure}
-      \includegraphics[width=.6\textwidth]{FiguraFundo}
-    \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Metodologia}
-   A cada intervalo de tempo $t$, o fundo atual é subtraído do fundo de $t$ segundos atrás.
-
-   As imagens de diferença são tratadas para excluir diferenças insiginificantes.
-
-   Diferenças podem significar duas coisas:
-   \begin{itemize}
-        \item Um novo objeto se integrou ao fundo ou;
-        \item Um objeto estático saiu da imagem.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Metodologia}
-   O próximo passo é comparar a região da diferença com as posições conhecidas de vagas e determinar se a vaga foi ocupada ou desocupada.
-
-   Se o estado anterior é conhecido e apenas carros pudessem se integrar ao fundo, isso seria trivial, mas esse não é o caso.
-
-    Também é preciso identificar que o objeto representado na diferença é realmente um carro.
-\end{frame}
-
-\begin{frame}
-\frametitle{Metodologia}
-   Métodos sendo explorados:
-   \begin{itemize}
-     \item  Rastreamento
-     \item  Comparação de histogramas
-     \item  Classificação
-   \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Plano de implementação}
-   A implementação vai seguir os seguintes passos:
-   \begin{itemize}
-     \item  Determinar ocupação de vagas em imagens estáticas a partir de um estado inicial conhecido e subtração de imagens.
-     \item  Determinar o estado das vagas a partir apenas de uma imagem.
-     \item  Usar o segundo passo para conferir os estados obtidos no primeiro passo.
-     \item  Implementar os métodos desenvolvidos nos passos anteriores em vídeos 'artificiais'.
-     \item  Validar o funcionamento do programa em vídeos reais.
-   \end{itemize}
 \end{frame}
 
 \section{Cronograma}

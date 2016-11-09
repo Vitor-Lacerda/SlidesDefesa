@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.3)  8 NOV 2016 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.3)  9 NOV 2016 16:35
 entering extended mode
 **./Seminario.tex
 (Seminario.tex
@@ -1568,56 +1568,130 @@ Overfull \vbox (5.09314pt too high) detected at line 440
 
  <./imagens/features.png>] (Seminario.toc) [36
 
-] [37
+]
+<imagens/fluxograma.png, id=1398, 1204.5pt x 828.09375pt>
+File: imagens/fluxograma.png Graphic file (type png)
 
-] [38
+<use imagens/fluxograma.png>
+Package pdftex.def Info: imagens/fluxograma.png used on input line 452.
+(pdftex.def)             Requested size: 307.28128pt x 160.61209pt.
+ [37
 
-] [39
+ <./imagens/fluxograma.png>]
+<imagens/Vazio3.png, id=1434, 1262.46657pt x 709.90219pt>
+File: imagens/Vazio3.png Graphic file (type png)
 
-] [40
+<use imagens/Vazio3.png>
+Package pdftex.def Info: imagens/Vazio3.png used on input line 464.
+(pdftex.def)             Requested size: 122.91406pt x 69.10956pt.
+ [38
+
+ <./imagens/Vazio3.png>]
+<imagens/ROIs.png, id=1470, 845.40843pt x 475.7775pt>
+File: imagens/ROIs.png Graphic file (type png)
+ <use imagens/ROIs.png>
+Package pdftex.def Info: imagens/ROIs.png used on input line 480.
+(pdftex.def)             Requested size: 122.91406pt x 69.17108pt.
+
+[39
+
+ <./imagens/ROIs.png>]
+<imagens/Secoes.png, id=1506, 843.90282pt x 474.27188pt>
+File: imagens/Secoes.png Graphic file (type png)
+
+<use imagens/Secoes.png>
+Package pdftex.def Info: imagens/Secoes.png used on input line 493.
+(pdftex.def)             Requested size: 122.91406pt x 69.07523pt.
+ [40
+
+ <./imagens/Secoes.png>] [41
 
 ]
-<imagens/FiguraFundo.png, id=1536, 451.6875pt x 526.96875pt>
-File: imagens/FiguraFundo.png Graphic file (type png)
+<imagens/imgSecao.png, id=1576, 152.06813pt x 225.09094pt>
+File: imagens/imgSecao.png Graphic file (type png)
 
-<use imagens/FiguraFundo.png>
-Package pdftex.def Info: imagens/FiguraFundo.png used on input line 491.
-(pdftex.def)             Requested size: 184.3758pt x 215.10976pt.
+<use imagens/imgSecao.png>
+Package pdftex.def Info: imagens/imgSecao.png used on input line 514.
+(pdftex.def)             Requested size: 122.91406pt x 181.9414pt.
 
-Overfull \vbox (50.57729pt too high) detected at line 491
+Overfull \vbox (33.13757pt too high) detected at line 514
  []
 
-[41
+[42
 
- <./imagens/FiguraFundo.png>] [42
+ <./imagens/imgSecao.png (PNG copy)>]
 
-] [43
+LaTeX Warning: Command \c invalid in math mode on input line 530.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 530.
+
+Missing character: There is no ç in font cmss10!
+Missing character: There is no ã in font cmss10!
+
+LaTeX Warning: Command \c invalid in math mode on input line 530.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 530.
+
+Missing character: There is no ç in font cmss10!
+Missing character: There is no ã in font cmss10!
+[43
 
 ] [44
 
 ] [45
 
-] (Seminario.toc) [46
+] <imagens/Influencia.png, id=1715, 149.05687pt x 153.57375pt>
+File: imagens/Influencia.png Graphic file (type png)
+
+<use imagens/Influencia.png>
+Package pdftex.def Info: imagens/Influencia.png used on input line 573.
+(pdftex.def)             Requested size: 122.91406pt x 126.63896pt.
+ [46
+
+ <./imagens/Influencia.png>]
+<imagens/erroMeio.png, id=1751, 840.89156pt x 471.26062pt>
+File: imagens/erroMeio.png Graphic file (type png)
+
+<use imagens/erroMeio.png>
+Package pdftex.def Info: imagens/erroMeio.png used on input line 583.
+(pdftex.def)             Requested size: 122.91406pt x 68.88113pt.
+ [47
+
+ <./imagens/erroMeio.png>] [48
 
 ]
-[47
+<imagens/fluxogramaVotos.png, id=1820, 553.31718pt x 233.37187pt>
+File: imagens/fluxogramaVotos.png Graphic file (type png)
 
-] (Seminario.toc) [48
+<use imagens/fluxogramaVotos.png>
+Package pdftex.def Info: imagens/fluxogramaVotos.png used on input line 608.
+(pdftex.def)             Requested size: 245.83282pt x 103.68456pt.
+ [49
 
-] [49
-
-] (Seminario.bbl) [50
+ <./imagens/fluxogramaVotos.png>]
+(Seminario.toc) [50
 
 ] [51
 
-
-] [52
-
+] (Seminario.toc) [52
 
 ] [53
 
+] (Seminario.bbl) [54
 
-] [54
+]
+[55
+
+
+] [56
+
+
+] [57
+
+
+] [58
 
 ]
 \tf@nav=\write6
@@ -1633,28 +1707,25 @@ Overfull \vbox (50.57729pt too high) detected at line 491
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 600.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 600.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 673.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 673.
 (Seminario.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 600.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 600.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 673.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 673.
 Package rerunfilecheck Info: File `Seminario.out' has not changed.
-(rerunfilecheck)             Checksum: 612317059ADE2BB63ABD961912C7F46E;372.
+(rerunfilecheck)             Checksum: 2A77979B01DDE0F20A3636A1B4FF953A;383.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 600.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 673.
  ) 
 Here is how much of TeX's memory you used:
- 19612 strings out of 493334
- 371042 string characters out of 3136663
- 446931 words of memory out of 3000000
- 22509 multiletter control sequences out of 15000+200000
+ 19661 strings out of 493334
+ 371927 string characters out of 3136663
+ 446896 words of memory out of 3000000
+ 22544 multiletter control sequences out of 15000+200000
  23733 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,68p,392b,692s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1681,10 +1752,11 @@ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Seminario.pdf (54 pages, 1644843 bytes).
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Seminario.pdf (58 pages, 4932852 bytes).
 PDF statistics:
- 2492 PDF objects out of 2984 (max. 8388607)
- 126 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2646 PDF objects out of 2984 (max. 8388607)
+ 133 named destinations out of 1000 (max. 500000)
+ 258 words of extra memory for PDF output out of 10000 (max. 10000000)
 

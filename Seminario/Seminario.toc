@@ -4,6 +4,6 @@
 \beamer@sectionintoc {2}{Objetivos}{7}{0}{2}
 \beamer@sectionintoc {3}{Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}{11}{0}{3}
 \beamer@sectionintoc {4}{Redes Neurais Artificiais}{25}{0}{4}
-\beamer@sectionintoc {5}{Metodologia}{36}{0}{5}
-\beamer@sectionintoc {6}{Cronograma}{46}{0}{6}
-\beamer@sectionintoc {7}{Conclusao}{48}{0}{7}
+\beamer@sectionintoc {5}{Solu\IeC {\c c}\IeC {\~a}o proposta}{36}{0}{5}
+\beamer@sectionintoc {6}{Cronograma}{50}{0}{6}
+\beamer@sectionintoc {7}{Conclusao}{52}{0}{7}
