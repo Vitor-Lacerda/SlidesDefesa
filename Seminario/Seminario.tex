@@ -607,6 +607,93 @@ A classe das seções vizinhas influência a classificação de uma seção de a
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Seções classificadas}
+  \begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{Classificada}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de movimento}
+\begin{itemize}
+\item Movimento detectado pelo método do Fluxo Óptico
+\item Resultado: imagem que representa as magnitudes dos vetores velocidade
+\item Essa imagem é limiarizada para eliminar os vetores não significativos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de movimento}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{quadroMov}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{mags}
+\end{subfigure}\\
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{limiarizada}
+\end{subfigure}
+\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regiões do movimento}
+\begin{block}{}
+Regiões são detectadas através de análise dos pixels brancos da imagem limiarizada.
+\end{block}
+
+\begin{figure}
+\centering
+\includegraphics[width=.4\textwidth]{retanguloMovimento}
+\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mapeamento das vagas}
+\begin{itemize}
+\item No momento inicial da execução conjuntos de seções ocupadas consecutivas formam uma vaga.
+\item Quando um movimento termina, a posição aonde ele acabou e começou é analisada.
+\item As seções verticais interceptadas pelo movimento nestas posições ficam não-estabilizadas, são reclassificadas e marcadas como uma vaga.
+\item Assume-se que os carros estão parando em vagas corretamente.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tratamento de intersecção de vagas}
+\begin{block}{Modo simples}
+Seções marcadas pelo movimento passam a fazer parte de uma vaga nova, vaga antiga é composta das seções restantes.
+\end{block}
+
+\begin{figure}
+\centering
+\includegraphics[width=.4\textwidth]{umasecao}
+\centering
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tratamento de intersecção de vagas}
+\begin{block}{Modo Complexo}
+Segue um conjunto mais elaborado de regras:
+\begin{itemize}
+\item $S_m \supseteq V \Rightarrow V = S_m$
+\item $S_m \subset V \Rightarrow V = S_m$. Caso $S_m - V$ seja um conjunto contínuo de um número suficiente de seções, uma nova vaga $V_2$ também é criada.
+\item Se $S_m \cap V \neq \emptyset$ as seções da intereseção são divididas entre as duas vagas, dando preferência para $S_m$.  
+\end{itemize}
+\end{block}
+\end{frame}
+
 \section{Cronograma}
 \begin{frame}
 \frametitle{Cronograma 2015}
