@@ -694,33 +694,473 @@ Segue um conjunto mais elaborado de regras:
 \end{block}
 \end{frame}
 
-\section{Cronograma}
+\section{Resultados Experimentais}
 \begin{frame}
-\frametitle{Cronograma 2015}
-%
-\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\frametitle{Aquisição dos vídeos}
+Drone \textit{Yuneec Typhoon Q500+}.
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{drone}
+\cente
+ring
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Experimentos}
+\begin{itemize}
+\item Oito vídeos curtos com ROIs determinadas previamente divididas em $30$ seções verticais.
+\item Desempenho do programa foi comparado com resultados de três observadores humanos: F, M e P.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{instrucoes}
+\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instruções}
+Cada observador recebeu as seguintes instruções:
+\begin{itemize}
+  \item As regiões de interesse e as seções são numeradas como indicado na figura.
+	\item Uma seção ocupada é aquela cuja maior parte de sua área está ocupada por um veículo.
+	\item No momento inicial do vídeo ($0$ segundos), indique quais seções verticais estão ocupadas através do número das ROI e das seções, as outras serão assumidas como livres. Indique também o número de vagas ocupadas.
+	\item Se a qualquer momento o estado de ocupação de uma seção mudar, indique o tempo da mudança, a seção onde ocorreu a mudança e a natureza da mudança(ocupada ou liberada).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Experimentos}
+\begin{block}{Ocupação das seções}
+\begin{itemize}
+\item Um acerto ocorre se em um determinado momento $t$, o programa e o observador concordam quanto a ocupação da seção.
+\item $60$ acertos possíveis por segundo.
+\item Taxa de acerto = número total de acertos/acertos possíveis.
+\end{itemize}
+\end{block}
+
+\begin{block}{Vagas ocupadas}
+\begin{itemize}
+\item Um acerto ocorre se em um determinado momento $t$, o programa e o observador concordam quanto ao número de vagas ocupadas.
+\item Número de acertos possíveis é igual a duração do vídeo.
+\item Taxa de acerto = número total de acertos/acertos possíveis.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 1}
+
+No primeiro caso de testes, o vídeo começa com um estacionamento vazio. Depois de alguns segundos um único veículo de cor branca entra na cena pela direita e estaciona em uma vaga na parte inferior da imagem. O vídeo tem $15s$ de duração.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video1Inicio}
+\end{subfigure}\
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video1Fim}
+\end{subfigure}
+\centering
+\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 1}
+	
+	\begin{center}
+\begin{tabular}{|c||c||c|}
 \hline
-Atividade & Jan & Fev & Mar & Abr & Maio & Jun & Jul \\
-\hline
-Pesquisa & X & X & & & & &  \\
-\hline
-Imagens &  & X & X &  &  &  &   \\
-\hline
-Implementação&  & X & X & X &  &  &   \\
-\hline
-Validação &   &   &  & X & X &  &   \\
-\hline
-Análise &   &   &  & X & X & X &   \\
-\hline
-Escrita  &   &   &  &  & X & X &   \\
-\hline
-Defesa  &   &   &  &  &  &  & X  \\
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline \hline
+Observador & Acertos& Taxa de acertos \\ \hline
+F & 886 & 98,44\% \\  \hline
+P & 886 & 98,44\% \\ \hline
+M & 884 & 98,22\% \\ \hline
+Média & 885,3 & 98,37\% \\
 \hline
 \end{tabular}
-%
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 1}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1 & 7\% \\  \hline
+P & 1 & 7\% \\ \hline
+M & 1 & 7\% \\ \hline
+Média & 1 & 7\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 2}
+
+Neste vídeo, um carro branco está estacionado no conjunto inferior de vagas. Um veículo cinza entra pela direita e estaciona no conjunto superior de vagas. O vídeo tem uma duração de $10s$.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video2Inicio}
+\end{subfigure}\
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video2Fim}
+\end{subfigure}
+\centering
+\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 2}
+	
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 586 & 97,66\% \\  \hline
+P & 586 & 97,66\% \\ \hline
+M & 586 & 97,66\% \\ \hline
+Média & 586 & 97,66\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 2}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 10 & 100\% \\  \hline
+P & 10 & 100\% \\ \hline
+M & 10 & 100\% \\ \hline
+Média & 10 & 100\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
 
 
+\begin{frame}
+\frametitle{Vídeo 3}
 
+Neste vídeo, dois carros se encontram no estacionamento. Um veículo amarelo entra pela direita e estaciona na seção superior das vagas. O veículo branco sai pela parte de baixo da tela. Ele tem duração de $20s$.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video3Inicio}
+\end{subfigure}\
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video3Fim}
+\end{subfigure}
+\centering
+\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 3}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1165 & 97,08\% \\  \hline
+P & 1113 & 92,75\% \\ \hline
+M & 1136 & 94,66\% \\ \hline
+Média & 1138 & 94,83\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 3}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 19 & 95\% \\  \hline
+P & 11 & 55\% \\ \hline
+M & 18 & 90\% \\ \hline
+Média & 16 & 80\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Vídeo 4}
+
+Neste vídeo, o veículo branco entra em cena pela parte superior da tela e estaciona entre os outros dois carros. O carro cinza sai da vaga que ocupava e estaciona em uma na área inferior. Duração de $30s$.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video4Inicio}
+\end{subfigure}\
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video4Fim}
+\end{subfigure}
+\centering
+\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 4}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1750 & 97,22\% \\  \hline
+P & 1749 & 97,16\% \\ \hline
+M & 1772 & 98,44\% \\ \hline
+Média & 1757 & 97,61\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 4}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 22 & 73,33\% \\  \hline
+P & 22 & 73,33\% \\ \hline
+M & 24 & 80\% \\ \hline
+Média & 22,66 & 75,55\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 5}
+
+Um veículo desocupa a sua vaga sainda pela parte superior da tela. Duração de $10s$.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video5Inicio}
+\end{subfigure}\
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video5Fim}
+\end{subfigure}
+\centering
+\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 5}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 597 & 99,50\% \\  \hline
+P & 585 & 97,50\% \\ \hline
+M & 587 & 97,83\% \\ \hline
+Média & 1757 & 97,61\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 5}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 10 & 100\% \\  \hline
+P & 9 & 90\% \\ \hline
+M & 10 & 100\% \\ \hline
+Média & 9,66 & 9\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 6}
+
+Neste vídeo o veículo amarelo entra na cena pela parte inferior da tela. O veículo branco desocupa sua vaga e sai da tela pelo lado esquerdo. O vídeo tem $13s$.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video6Inicio}
+\end{subfigure}\
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video6Fim}
+\end{subfigure}
+\centering
+\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 6}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 752 & 96,40\% \\  \hline
+P & 774 & 99,23\% \\ \hline
+M & 767 & 98,33\% \\ \hline
+Média & 764,33 & 97,99\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 6}
+
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 10 & 76,92\% \\  \hline
+P & 11 & 84,61\% \\ \hline
+M & 9 & 69,23\% \\ \hline
+Média & 10 & 76,92\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Vídeo 7}
+Neste vídeo um dos carros sai da cena pela esquerda. O vídeo tem $17s$.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video7Inicio}
+\end{subfigure}\
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video7Fim}
+\end{subfigure}
+\centering
+\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 7}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1013 & 99,31\% \\  \hline
+P & 1014 & 99,41\% \\ \hline
+M & 1016 & 99,60\% \\ \hline
+Média & 1014,33 & 99,44\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 7}
+
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 16 & 94,11\% \\  \hline
+P & 16 & 94,11\% \\ \hline
+M & 17 & 100\% \\ \hline
+Média & 16,33 & 96,07\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 7}
+No oitavo e último caso de testes, um carro branco passa pela região central da imagem sem estacionar em nenhuma vaga e depois um carro cinza estaciona na região inferior. O vídeo tem $23s$ de duração.
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video8Inicio}
+\end{subfigure}\
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.5\linewidth]{Video8Fim}
+\end{subfigure}
+\centering
+\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 8}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline\hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1376 & 99,71\% \\  \hline
+P & 1379 & 99,92\% \\ \hline
+M & 1379 & 99,92\% \\ \hline
+Média & 1378 & 99,85\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 8}
+
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 23 & 100\% \\  \hline
+P & 23 & 100\% \\ \hline
+M & 23 & 100\% \\ \hline
+Média & 23 & 100\% \\
+\hline
+\end{tabular}
+\end{center}
 \end{frame}
 
 
