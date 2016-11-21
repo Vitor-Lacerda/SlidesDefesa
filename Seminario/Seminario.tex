@@ -442,14 +442,7 @@ A rede recebe um conjunto de entradas e aprende características intrínsecas do
 
 \section{Solução proposta}
 
-\begin{frame}
-\frametitle{Fluxograma}
-\begin{figure}
-	\centering
-	\includegraphics[width=1\textwidth, height=.8\textheight]{fluxograma}
-	\centering
-\end{figure}
-\end{frame}
+
 
 \begin{frame}
 \frametitle{Aquisição}
@@ -459,6 +452,15 @@ A rede recebe um conjunto de entradas e aprende características intrínsecas do
 \begin{figure}
 	\centering
 	\includegraphics[width=.4\textwidth]{Vazio3}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Calibração}
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{fluxogramacalibracao}
 	\centering
 \end{figure}
 \end{frame}
@@ -492,6 +494,10 @@ Cada ROI é dividida em um número igual de seções verticais.
 
 \end{frame}
 
+
+
+
+
 \begin{frame}
 \frametitle{Classificação das seções}
 	A classificação tem 4 etapas:
@@ -501,6 +507,15 @@ Cada ROI é dividida em um número igual de seções verticais.
       \item Ajuste pelos vizinhos.
       \item Sistema de votação
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extração de características}
+\begin{figure}
+	\centering
+	\includegraphics[height=.8\textheight]{fluxogramacaracteristicas}
+	\centering
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -529,6 +544,9 @@ Imagens individuais de cada seção são extraídas.
 
 \end{frame}
 
+
+
+
 \begin{frame}
 \frametitle{Classificação da Rede Neural Artificial}
    \begin{itemize}
@@ -543,6 +561,15 @@ Imagens individuais de cada seção são extraídas.
 	\centering
   \end{equation}
 
+\end{frame}
+
+\begin{frame}
+\frametitle{Classificação da Rede Neural Artificial}
+\begin{figure}
+	\centering
+	\includegraphics[height=.8\textheight]{fluxogramaclassificacao}
+	\centering
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -628,6 +655,15 @@ A classe das seções vizinhas influência a classificação de uma seção de a
 \begin{frame}
 \frametitle{Detecção de movimento}
 \begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{fluxogramamovimento}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de movimento}
+\begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -701,8 +737,7 @@ Drone \textit{Yuneec Typhoon Q500+}.
 \begin{figure}
 \centering
 \includegraphics[width=8cm]{drone}
-\cente
-ring
+\centering
 \end{figure}
 \end{frame}
 
@@ -1002,7 +1037,7 @@ Observador & Acertos & Taxa de acertos \\ \hline
 F & 10 & 100\% \\  \hline
 P & 9 & 90\% \\ \hline
 M & 10 & 100\% \\ \hline
-Média & 9,66 & 9\% \\
+Média & 9,66 & 96.66\% \\
 \hline
 \end{tabular}
 \end{center}
@@ -1148,7 +1183,6 @@ Média & 1378 & 99,85\% \\
 
 \begin{frame}
 \frametitle{Vídeo 8}
-
 \begin{center}
 \begin{tabular}{|c||c||c|}
 \hline
@@ -1166,12 +1200,32 @@ Média & 23 & 100\% \\
 
 
 
-\section{Conclusao}
+\section{Conclusão}
 \begin{frame}
-\frametitle{Conclusao}
-\huge
-Perguntas?
+\frametitle{Conclusão}
 
+\begin{itemize}
+	\item Procurar por vagas em estacionamentos custa tempo e dinheiro.
+	\item Para estacionamentos descobertos, soluções que utilizam vídeo são mais adequadas.
+	\item O trabalho apresentado analisa vídeos de câmeras montadas em postes de luz para determinar a ocupação das vagas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusão}
+	\begin{itemize}
+		\item Resultados semelhantes aos dos observadores na maior parte dos casos.
+		\item Resistente a erros pontuais de classificação da rede.
+		\item Dificuldades em classificação de veículos com coloração semelhante ao asfalto.
+		\item Algumas falhas no mapeamento causadas por inconsistências no tamanho dos carros.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusão}
+	\begin{block}{}
+		Por fim, o programa se mostrou capaz de ajudar de maneira simples os motoristas a encontrarem vagas em estacionamentos descobertos e de suprir a demanda por uma solução adequada para estes estacionamentos. No futuro porém, é necessário um refinamento do mapeamento e uma evolução do sistema para que seja capaz de analisar corretamente imagens capturadas por câmeras instaladas em posições mais oblíquas ao estacionamento.
+	\end{block}
 \end{frame}
 
 

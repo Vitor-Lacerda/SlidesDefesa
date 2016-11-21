@@ -1,18 +1,16 @@
 \begin{thebibliography}{10}
 
+\bibitem{NNForPR}
+Christopher~M Bishop.
+\newblock {\em Neural networks for pattern recognition}.
+\newblock Oxford university press, 1995.
+
 \bibitem{bong2008integrated}
 DBL Bong, KC~Ting, and KC~Lai.
 \newblock Integrated approach in the design of car park occupancy information
   system (coins).
 \newblock {\em IAENG International Journal of Computer Science}, 35(1):7--14,
   2008.
-
-\bibitem{chen2012dynamic}
-Wen-Yuan Chen and Chuin-Mu Wang.
-\newblock The dynamic background generation scheme using an image frame
-  statistical comparison method.
-\newblock {\em International Journal of Advancements in Computing Technology},
-  4(18), 2012.
 
 \bibitem{de2006introduccao}
 Jos{\'e} Eust{\'a}quio~Rangel de~Queiroz and Herman~Martins Gomes.
@@ -30,17 +28,10 @@ Rafael~C Gonzalez.
 \newblock {\em Digital image processing}.
 \newblock Pearson Education India, 2009.
 
-\bibitem{graciano2007rastreamento}
-Ana Beatriz~Vicentim Graciano.
-\newblock {\em Rastreamento de objetos baseado em reconhecimento estrutural de
-  padroes}.
-\newblock PhD thesis, Universidade de S{\~a}o Paulo, 2007.
-
-\bibitem{hai2009self}
-Zhai Hai-tao, Wu~Jian, Xia Jie, and Cui Zhi-ming.
-\newblock Self-adaptive detection of moving vehicles in traffic video.
-\newblock In {\em The 2009 International Symposium on Web Information Systems
-  and Applications (WISA 2009)}, page 449, 2009.
+\bibitem{Haykin}
+Simon Haykin.
+\newblock {\em Neural Networks}.
+\newblock Prentice Hall, 2 edition, 1999.
 
 \bibitem{IBGE2000introducao}
 IBGE.

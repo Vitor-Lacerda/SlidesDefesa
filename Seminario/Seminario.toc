@@ -5,5 +5,5 @@
 \beamer@sectionintoc {3}{Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}{11}{0}{3}
 \beamer@sectionintoc {4}{Redes Neurais Artificiais}{25}{0}{4}
 \beamer@sectionintoc {5}{Solu\IeC {\c c}\IeC {\~a}o proposta}{36}{0}{5}
-\beamer@sectionintoc {6}{Resultados Experimentais}{57}{0}{6}
-\beamer@sectionintoc {7}{Conclusao}{86}{0}{7}
+\beamer@sectionintoc {6}{Resultados Experimentais}{60}{0}{6}
+\beamer@sectionintoc {7}{Conclus\IeC {\~a}o}{89}{0}{7}

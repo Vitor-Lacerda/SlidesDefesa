@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.10)  13 NOV 2016 19:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.10)  21 NOV 2016 01:51
 entering extended mode
 **Seminario.tex
 (Seminario.tex
@@ -1294,14 +1294,7 @@ File: imagens/feedforward.png Graphic file (type png)
 <use imagens/feedforward.png>
 Package pdftex.def Info: imagens/feedforward.png used on input line 388.
 (pdftex.def)             Requested size: 92.1879pt x 124.9774pt.
-
-
-Package natbib Warning: Citation `Haykin' on page 30 undefined on input line 388.
-
-
-Package natbib Warning: Citation `Haykin' on page 30 undefined on input line 388.
-
-[30
+ [30
 
  <./imagens/feedforward.png>] [31
 
@@ -1311,19 +1304,12 @@ Package natbib Warning: Citation `Haykin' on page 30 undefined on input line 388
 
 ] [34
 
-] <imagens/features.png, id=1319, 110.66344pt x 102.3825pt>
+]
+<imagens/features.png, id=1318, 110.66344pt x 102.3825pt>
 File: imagens/features.png Graphic file (type png)
-
-<use imagens/features.png>
+ <use imagens/features.png>
 Package pdftex.def Info: imagens/features.png used on input line 440.
 (pdftex.def)             Requested size: 142.26378pt x 131.62561pt.
-
-
-Package natbib Warning: Citation `NNForPR' on page 35 undefined on input line 440.
-
-
-Package natbib Warning: Citation `NNForPR' on page 35 undefined on input line 440.
-
 
 Overfull \vbox (5.09314pt too high) detected at line 440
  []
@@ -1332,347 +1318,373 @@ Overfull \vbox (5.09314pt too high) detected at line 440
 
  <./imagens/features.png>] (Seminario.toc) [36
 
-] <imagens/fluxograma.png, id=1398, 1204.5pt x 828.09375pt>
-File: imagens/fluxograma.png Graphic file (type png)
-
-<use imagens/fluxograma.png>
-Package pdftex.def Info: imagens/fluxograma.png used on input line 452.
-(pdftex.def)             Requested size: 307.28128pt x 160.61209pt.
- [37
-
- <./imagens/fluxograma.png>] <imagens/Vazio3.png, id=1434, 1262.46657pt x 709.90219pt>
+] <imagens/Vazio3.png, id=1397, 1262.46657pt x 709.90219pt>
 File: imagens/Vazio3.png Graphic file (type png)
 
 <use imagens/Vazio3.png>
-Package pdftex.def Info: imagens/Vazio3.png used on input line 464.
+Package pdftex.def Info: imagens/Vazio3.png used on input line 457.
 (pdftex.def)             Requested size: 122.91406pt x 69.10956pt.
- [38
+ [37
 
- <./imagens/Vazio3.png>] <imagens/ROIs.png, id=1470, 845.40843pt x 475.7775pt>
+ <./imagens/Vazio3.png>]
+<imagens/fluxogramacalibracao.png, id=1434, 258.9675pt x 191.9672pt>
+File: imagens/fluxogramacalibracao.png Graphic file (type png)
+ <use imagens/fluxogramacalibracao.png>
+Package pdftex.def Info: imagens/fluxogramacalibracao.png used on input line 466.
+(pdftex.def)             Requested size: 245.83282pt x 182.2389pt.
+
+Overfull \vbox (17.70644pt too high) detected at line 466
+ []
+
+[38
+
+ <./imagens/fluxogramacalibracao.png>] <imagens/ROIs.png, id=1470, 845.40843pt x 475.7775pt>
 File: imagens/ROIs.png Graphic file (type png)
-
-<use imagens/ROIs.png>
-Package pdftex.def Info: imagens/ROIs.png used on input line 480.
+ <use imagens/ROIs.png>
+Package pdftex.def Info: imagens/ROIs.png used on input line 482.
 (pdftex.def)             Requested size: 122.91406pt x 69.17108pt.
- [39
+
+[39
 
  <./imagens/ROIs.png>] <imagens/Secoes.png, id=1506, 843.90282pt x 474.27188pt>
 File: imagens/Secoes.png Graphic file (type png)
-
-<use imagens/Secoes.png>
-Package pdftex.def Info: imagens/Secoes.png used on input line 493.
+ <use imagens/Secoes.png>
+Package pdftex.def Info: imagens/Secoes.png used on input line 495.
 (pdftex.def)             Requested size: 122.91406pt x 69.07523pt.
  [40
 
  <./imagens/Secoes.png>] [41
 
-] <imagens/imgSecao.png, id=1576, 152.06813pt x 225.09094pt>
-File: imagens/imgSecao.png Graphic file (type png)
+] <imagens/fluxogramacaracteristicas.png, id=1576, 347.79938pt x 322.95656pt>
+File: imagens/fluxogramacaracteristicas.png Graphic file (type png)
 
-<use imagens/imgSecao.png>
-Package pdftex.def Info: imagens/imgSecao.png used on input line 514.
+<use imagens/fluxogramacaracteristicas.png>
+Package pdftex.def Info: imagens/fluxogramacaracteristicas.png used on input line 519.
+(pdftex.def)             Requested size: 172.97054pt x 160.61827pt.
+ [42
+
+ <./imagens/fluxogramacaracteristicas.png>]
+<imagens/imgSecao.png, id=1612, 152.06813pt x 225.09094pt>
+File: imagens/imgSecao.png Graphic file (type png)
+ <use imagens/imgSecao.png>
+Package pdftex.def Info: imagens/imgSecao.png used on input line 529.
 (pdftex.def)             Requested size: 122.91406pt x 181.9414pt.
 
-Overfull \vbox (33.13757pt too high) detected at line 514
+Overfull \vbox (33.13757pt too high) detected at line 529
  []
 
-[42
+[43
 
  <./imagens/imgSecao.png (PNG copy)>]
 
-LaTeX Warning: Command \c invalid in math mode on input line 530.
+LaTeX Warning: Command \c invalid in math mode on input line 545.
 
 
-LaTeX Warning: Command \~ invalid in math mode on input line 530.
-
-Missing character: There is no ç in font cmss10!
-Missing character: There is no ã in font cmss10!
-
-LaTeX Warning: Command \c invalid in math mode on input line 530.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 530.
+LaTeX Warning: Command \~ invalid in math mode on input line 545.
 
 Missing character: There is no ç in font cmss10!
 Missing character: There is no ã in font cmss10!
-[43
 
-] [44
+LaTeX Warning: Command \c invalid in math mode on input line 545.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 545.
+
+Missing character: There is no ç in font cmss10!
+Missing character: There is no ã in font cmss10!
+[44
 
 ] [45
 
-] <imagens/Influencia.png, id=1715, 149.05687pt x 153.57375pt>
-File: imagens/Influencia.png Graphic file (type png)
- <use imagens/Influencia.png>
-Package pdftex.def Info: imagens/Influencia.png used on input line 573.
-(pdftex.def)             Requested size: 122.91406pt x 126.63896pt.
+] <imagens/fluxogramaclassificacao.png, id=1716, 137.01187pt x 205.5178pt>
+File: imagens/fluxogramaclassificacao.png Graphic file (type png)
+
+<use imagens/fluxogramaclassificacao.png>
+Package pdftex.def Info: imagens/fluxogramaclassificacao.png used on input line 573.
+(pdftex.def)             Requested size: 107.07788pt x 160.61827pt.
  [46
 
- <./imagens/Influencia.png>] <imagens/erroMeio.png, id=1751, 840.89156pt x 471.26062pt>
-File: imagens/erroMeio.png Graphic file (type png)
- <use imagens/erroMeio.png>
-Package pdftex.def Info: imagens/erroMeio.png used on input line 583.
-(pdftex.def)             Requested size: 122.91406pt x 68.88113pt.
- [47
-
- <./imagens/erroMeio.png>] [48
-
-] <imagens/fluxogramaVotos.png, id=1821, 553.31718pt x 233.37187pt>
-File: imagens/fluxogramaVotos.png Graphic file (type png)
- <use imagens/fluxogramaVotos.png>
-Package pdftex.def Info: imagens/fluxogramaVotos.png used on input line 608.
-(pdftex.def)             Requested size: 245.83282pt x 103.68456pt.
-
-[49
-
- <./imagens/fluxogramaVotos.png>] <imagens/Classificada.png, id=1858, 841.64438pt x 475.02469pt>
-File: imagens/Classificada.png Graphic file (type png)
-
-<use imagens/Classificada.png>
-Package pdftex.def Info: imagens/Classificada.png used on input line 617.
-(pdftex.def)             Requested size: 245.83282pt x 138.74664pt.
- [50
-
- <./imagens/Classificada.png>] [51
+ <./imagens/fluxogramaclassificacao.png>] [47
 
 ]
-<imagens/quadroMov.png, id=1928, 857.2025pt x 481.8pt>
+<imagens/Influencia.png, id=1787, 149.05687pt x 153.57375pt>
+File: imagens/Influencia.png Graphic file (type png)
+ <use imagens/Influencia.png>
+Package pdftex.def Info: imagens/Influencia.png used on input line 600.
+(pdftex.def)             Requested size: 122.91406pt x 126.63896pt.
+ [48
+
+ <./imagens/Influencia.png>] <imagens/erroMeio.png, id=1823, 840.89156pt x 471.26062pt>
+File: imagens/erroMeio.png Graphic file (type png)
+ <use imagens/erroMeio.png>
+Package pdftex.def Info: imagens/erroMeio.png used on input line 610.
+(pdftex.def)             Requested size: 122.91406pt x 68.88113pt.
+ [49
+
+ <./imagens/erroMeio.png>]
+[50
+
+] <imagens/fluxogramaVotos.png, id=1894, 553.31718pt x 233.37187pt>
+File: imagens/fluxogramaVotos.png Graphic file (type png)
+ <use imagens/fluxogramaVotos.png>
+Package pdftex.def Info: imagens/fluxogramaVotos.png used on input line 635.
+(pdftex.def)             Requested size: 245.83282pt x 103.68456pt.
+ [51
+
+ <./imagens/fluxogramaVotos.png>] <imagens/Classificada.png, id=1930, 841.64438pt x 475.02469pt>
+File: imagens/Classificada.png Graphic file (type png)
+ <use imagens/Classificada.png>
+Package pdftex.def Info: imagens/Classificada.png used on input line 644.
+(pdftex.def)             Requested size: 245.83282pt x 138.74664pt.
+
+[52
+
+ <./imagens/Classificada.png>] [53
+
+] <imagens/fluxogramamovimento.png, id=2000, 574.39594pt x 264.23718pt>
+File: imagens/fluxogramamovimento.png Graphic file (type png)
+
+<use imagens/fluxogramamovimento.png>
+Package pdftex.def Info: imagens/fluxogramamovimento.png used on input line 662.
+(pdftex.def)             Requested size: 245.83282pt x 113.08755pt.
+ [54
+
+ <./imagens/fluxogramamovimento.png>]
+<imagens/quadroMov.png, id=2036, 857.2025pt x 481.8pt>
 File: imagens/quadroMov.png Graphic file (type png)
  <use imagens/quadroMov.png>
-Package pdftex.def Info: imagens/quadroMov.png used on input line 646.
+Package pdftex.def Info: imagens/quadroMov.png used on input line 682.
 (pdftex.def)             Requested size: 122.9164pt x 69.0836pt.
 
-<imagens/mags.png, id=1929, 857.2025pt x 481.8pt>
+<imagens/mags.png, id=2037, 857.2025pt x 481.8pt>
 File: imagens/mags.png Graphic file (type png)
  <use imagens/mags.png>
-Package pdftex.def Info: imagens/mags.png used on input line 646.
+Package pdftex.def Info: imagens/mags.png used on input line 682.
 (pdftex.def)             Requested size: 122.9164pt x 69.0836pt.
 
-<imagens/limiarizada.png, id=1930, 857.2025pt x 481.8pt>
+<imagens/limiarizada.png, id=2038, 857.2025pt x 481.8pt>
 File: imagens/limiarizada.png Graphic file (type png)
  <use imagens/limiarizada.png>
-Package pdftex.def Info: imagens/limiarizada.png used on input line 646.
+Package pdftex.def Info: imagens/limiarizada.png used on input line 682.
 (pdftex.def)             Requested size: 122.9164pt x 69.0836pt.
- [52
+ [55
 
  <./imagens/quadroMov.png (PNG copy)> <./imagens/mags.png (PNG copy)> <./imagens/limiarizada.png (PNG copy)>]
-<imagens/retanguloMovimento.png, id=1965, 644.4075pt x 363.60844pt>
+<imagens/retanguloMovimento.png, id=2074, 644.4075pt x 363.60844pt>
 File: imagens/retanguloMovimento.png Graphic file (type png)
  <use imagens/retanguloMovimento.png>
-Package pdftex.def Info: imagens/retanguloMovimento.png used on input line 659.
+Package pdftex.def Info: imagens/retanguloMovimento.png used on input line 695.
 (pdftex.def)             Requested size: 122.91406pt x 69.35263pt.
- [53
+ [56
 
- <./imagens/retanguloMovimento.png>] [54
+ <./imagens/retanguloMovimento.png>] [57
 
-] <imagens/umasecao.png, id=2035, 462.22687pt x 286.06876pt>
+] <imagens/umasecao.png, id=2144, 462.22687pt x 286.06876pt>
 File: imagens/umasecao.png Graphic file (type png)
  <use imagens/umasecao.png>
-Package pdftex.def Info: imagens/umasecao.png used on input line 683.
+Package pdftex.def Info: imagens/umasecao.png used on input line 719.
 (pdftex.def)             Requested size: 122.91406pt x 76.06975pt.
-
-[55
-
- <./imagens/umasecao.png>] [56
-
-] (Seminario.toc) [57
-
-] <imagens/drone.jpg, id=2146, 1927.2pt x 1084.05pt>
-File: imagens/drone.jpg Graphic file (type jpg)
-
-<use imagens/drone.jpg>
-Package pdftex.def Info: imagens/drone.jpg used on input line 707.
-(pdftex.def)             Requested size: 227.62204pt x 128.02927pt.
-
-! Undefined control sequence.
-\beamer@doifinframe ... [width=8cm]{drone} \cente 
-                                                  ring \end {figure} \end {b...
-l.707 \end{frame}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 [58
 
- <./imagens/drone.jpg>] <imagens/instrucoes.png, id=2181, 843.90282pt x 474.27188pt>
+ <./imagens/umasecao.png>] [59
+
+] (Seminario.toc) [60
+
+] <imagens/drone.jpg, id=2254, 1927.2pt x 1084.05pt>
+File: imagens/drone.jpg Graphic file (type jpg)
+
+<use imagens/drone.jpg>
+Package pdftex.def Info: imagens/drone.jpg used on input line 742.
+(pdftex.def)             Requested size: 227.62204pt x 128.02927pt.
+ [61
+
+ <./imagens/drone.jpg>] <imagens/instrucoes.png, id=2290, 843.90282pt x 474.27188pt>
 File: imagens/instrucoes.png Graphic file (type png)
- <use imagens/instrucoes.png>
-Package pdftex.def Info: imagens/instrucoes.png used on input line 721.
+
+<use imagens/instrucoes.png>
+Package pdftex.def Info: imagens/instrucoes.png used on input line 756.
 (pdftex.def)             Requested size: 113.81102pt x 63.9588pt.
-
-[59
-
- <./imagens/instrucoes.png>] [60
-
-]
-Overfull \vbox (29.02377pt too high) detected at line 751
- []
-
-[61
-
-] <imagens/Video1Inicio.png, id=2285, 1266.23062pt x 711.4078pt>
-File: imagens/Video1Inicio.png Graphic file (type png)
- <use imagens/Video1Inicio.png>
-Package pdftex.def Info: imagens/Video1Inicio.png used on input line 770.
-(pdftex.def)             Requested size: 76.82246pt x 43.16025pt.
-
-<imagens/Video1Fim.png, id=2286, 1266.98344pt x 711.4078pt>
-File: imagens/Video1Fim.png Graphic file (type png)
- <use imagens/Video1Fim.png>
-Package pdftex.def Info: imagens/Video1Fim.png used on input line 770.
-(pdftex.def)             Requested size: 76.82246pt x 43.12769pt.
  [62
 
- <./imagens/Video1Inicio.png> <./imagens/Video1Fim.png>] [63
+ <./imagens/instrucoes.png>] [63
 
-] [64
+]
+Overfull \vbox (29.02377pt too high) detected at line 786
+ []
 
-] <imagens/Video2Inicio.png, id=2389, 1265.47781pt x 711.4078pt>
-File: imagens/Video2Inicio.png Graphic file (type png)
+[64
 
-<use imagens/Video2Inicio.png>
-Package pdftex.def Info: imagens/Video2Inicio.png used on input line 822.
-(pdftex.def)             Requested size: 76.82246pt x 43.18196pt.
- <imagens/Video2Fim.png, id=2390, 1265.47781pt x 712.16063pt>
-File: imagens/Video2Fim.png Graphic file (type png)
- <use imagens/Video2Fim.png>
-Package pdftex.def Info: imagens/Video2Fim.png used on input line 822.
-(pdftex.def)             Requested size: 76.82246pt x 43.22766pt.
+] <imagens/Video1Inicio.png, id=2393, 1266.23062pt x 711.4078pt>
+File: imagens/Video1Inicio.png Graphic file (type png)
+ <use imagens/Video1Inicio.png>
+Package pdftex.def Info: imagens/Video1Inicio.png used on input line 805.
+(pdftex.def)             Requested size: 76.82246pt x 43.16025pt.
 
-[65
+<imagens/Video1Fim.png, id=2394, 1266.98344pt x 711.4078pt>
+File: imagens/Video1Fim.png Graphic file (type png)
+ <use imagens/Video1Fim.png>
+Package pdftex.def Info: imagens/Video1Fim.png used on input line 805.
+(pdftex.def)             Requested size: 76.82246pt x 43.12769pt.
+ [65
 
- <./imagens/Video2Inicio.png> <./imagens/Video2Fim.png>] [66
+ <./imagens/Video1Inicio.png> <./imagens/Video1Fim.png>] [66
 
 ] [67
 
-]
-<imagens/Video3Inicio.png, id=2496, 1264.725pt x 709.90219pt>
-File: imagens/Video3Inicio.png Graphic file (type png)
- <use imagens/Video3Inicio.png>
-Package pdftex.def Info: imagens/Video3Inicio.png used on input line 875.
-(pdftex.def)             Requested size: 76.82246pt x 43.11223pt.
+] <imagens/Video2Inicio.png, id=2500, 1265.47781pt x 711.4078pt>
+File: imagens/Video2Inicio.png Graphic file (type png)
 
-<imagens/Video3Fim.png, id=2497, 1266.23062pt x 709.14937pt>
-File: imagens/Video3Fim.png Graphic file (type png)
- <use imagens/Video3Fim.png>
-Package pdftex.def Info: imagens/Video3Fim.png used on input line 875.
-(pdftex.def)             Requested size: 76.82246pt x 43.02324pt.
- [68
+<use imagens/Video2Inicio.png>
+Package pdftex.def Info: imagens/Video2Inicio.png used on input line 857.
+(pdftex.def)             Requested size: 76.82246pt x 43.18196pt.
+ <imagens/Video2Fim.png, id=2501, 1265.47781pt x 712.16063pt>
+File: imagens/Video2Fim.png Graphic file (type png)
+ <use imagens/Video2Fim.png>
+Package pdftex.def Info: imagens/Video2Fim.png used on input line 857.
+(pdftex.def)             Requested size: 76.82246pt x 43.22766pt.
 
- <./imagens/Video3Inicio.png> <./imagens/Video3Fim.png>] [69
+[68
+
+ <./imagens/Video2Inicio.png> <./imagens/Video2Fim.png>] [69
 
 ] [70
 
-] <imagens/Video4Inicio.png, id=2600, 1265.47781pt x 709.14937pt>
-File: imagens/Video4Inicio.png Graphic file (type png)
+]
+<imagens/Video3Inicio.png, id=2606, 1264.725pt x 709.90219pt>
+File: imagens/Video3Inicio.png Graphic file (type png)
+ <use imagens/Video3Inicio.png>
+Package pdftex.def Info: imagens/Video3Inicio.png used on input line 910.
+(pdftex.def)             Requested size: 76.82246pt x 43.11223pt.
 
-<use imagens/Video4Inicio.png>
-Package pdftex.def Info: imagens/Video4Inicio.png used on input line 926.
-(pdftex.def)             Requested size: 76.82246pt x 43.04488pt.
- <imagens/Video4Fim.png, id=2601, 1267.73625pt x 711.4078pt>
-File: imagens/Video4Fim.png Graphic file (type png)
- <use imagens/Video4Fim.png>
-Package pdftex.def Info: imagens/Video4Fim.png used on input line 926.
-(pdftex.def)             Requested size: 76.82246pt x 43.10597pt.
+<imagens/Video3Fim.png, id=2607, 1266.23062pt x 709.14937pt>
+File: imagens/Video3Fim.png Graphic file (type png)
+ <use imagens/Video3Fim.png>
+Package pdftex.def Info: imagens/Video3Fim.png used on input line 910.
+(pdftex.def)             Requested size: 76.82246pt x 43.02324pt.
+ [71
 
-[71
-
- <./imagens/Video4Inicio.png> <./imagens/Video4Fim.png>] [72
+ <./imagens/Video3Inicio.png> <./imagens/Video3Fim.png>] [72
 
 ] [73
 
-]
-<imagens/Video5Inicio.png, id=2706, 1266.23062pt x 712.16063pt>
-File: imagens/Video5Inicio.png Graphic file (type png)
- <use imagens/Video5Inicio.png>
-Package pdftex.def Info: imagens/Video5Inicio.png used on input line 977.
-(pdftex.def)             Requested size: 76.82246pt x 43.20592pt.
+] <imagens/Video4Inicio.png, id=2713, 1265.47781pt x 709.14937pt>
+File: imagens/Video4Inicio.png Graphic file (type png)
 
-<imagens/Video5Fim.png, id=2707, 1264.725pt x 707.64375pt>
-File: imagens/Video5Fim.png Graphic file (type png)
- <use imagens/Video5Fim.png>
-Package pdftex.def Info: imagens/Video5Fim.png used on input line 977.
-(pdftex.def)             Requested size: 76.82246pt x 42.97508pt.
- [74
+<use imagens/Video4Inicio.png>
+Package pdftex.def Info: imagens/Video4Inicio.png used on input line 961.
+(pdftex.def)             Requested size: 76.82246pt x 43.04488pt.
+ <imagens/Video4Fim.png, id=2714, 1267.73625pt x 711.4078pt>
+File: imagens/Video4Fim.png Graphic file (type png)
+ <use imagens/Video4Fim.png>
+Package pdftex.def Info: imagens/Video4Fim.png used on input line 961.
+(pdftex.def)             Requested size: 76.82246pt x 43.10597pt.
 
- <./imagens/Video5Inicio.png> <./imagens/Video5Fim.png>] [75
+[74
+
+ <./imagens/Video4Inicio.png> <./imagens/Video4Fim.png>] [75
 
 ] [76
 
-] <imagens/Video6Inicio.png, id=2812, 1262.46657pt x 709.90219pt>
-File: imagens/Video6Inicio.png Graphic file (type png)
+]
+<imagens/Video5Inicio.png, id=2819, 1266.23062pt x 712.16063pt>
+File: imagens/Video5Inicio.png Graphic file (type png)
+ <use imagens/Video5Inicio.png>
+Package pdftex.def Info: imagens/Video5Inicio.png used on input line 1012.
+(pdftex.def)             Requested size: 76.82246pt x 43.20592pt.
 
-<use imagens/Video6Inicio.png>
-Package pdftex.def Info: imagens/Video6Inicio.png used on input line 1028.
-(pdftex.def)             Requested size: 76.82246pt x 43.18806pt.
- <imagens/Video6Fim.png, id=2813, 1260.96094pt x 709.14937pt>
-File: imagens/Video6Fim.png Graphic file (type png)
- <use imagens/Video6Fim.png>
-Package pdftex.def Info: imagens/Video6Fim.png used on input line 1028.
-(pdftex.def)             Requested size: 76.82246pt x 43.19637pt.
+<imagens/Video5Fim.png, id=2820, 1264.725pt x 707.64375pt>
+File: imagens/Video5Fim.png Graphic file (type png)
+ <use imagens/Video5Fim.png>
+Package pdftex.def Info: imagens/Video5Fim.png used on input line 1012.
+(pdftex.def)             Requested size: 76.82246pt x 42.97508pt.
+ [77
 
-[77
-
- <./imagens/Video6Inicio.png> <./imagens/Video6Fim.png>] [78
+ <./imagens/Video5Inicio.png> <./imagens/Video5Fim.png>] [78
 
 ] [79
 
-]
-<imagens/Video7Inicio.png, id=2919, 1264.725pt x 711.4078pt>
-File: imagens/Video7Inicio.png Graphic file (type png)
- <use imagens/Video7Inicio.png>
-Package pdftex.def Info: imagens/Video7Inicio.png used on input line 1080.
-(pdftex.def)             Requested size: 76.82246pt x 43.20367pt.
+] <imagens/Video6Inicio.png, id=2926, 1262.46657pt x 709.90219pt>
+File: imagens/Video6Inicio.png Graphic file (type png)
 
-<imagens/Video7Fim.png, id=2920, 1259.4553pt x 708.39656pt>
-File: imagens/Video7Fim.png Graphic file (type png)
- <use imagens/Video7Fim.png>
-Package pdftex.def Info: imagens/Video7Fim.png used on input line 1080.
-(pdftex.def)             Requested size: 76.82246pt x 43.20456pt.
- [80
+<use imagens/Video6Inicio.png>
+Package pdftex.def Info: imagens/Video6Inicio.png used on input line 1063.
+(pdftex.def)             Requested size: 76.82246pt x 43.18806pt.
+ <imagens/Video6Fim.png, id=2927, 1260.96094pt x 709.14937pt>
+File: imagens/Video6Fim.png Graphic file (type png)
+ <use imagens/Video6Fim.png>
+Package pdftex.def Info: imagens/Video6Fim.png used on input line 1063.
+(pdftex.def)             Requested size: 76.82246pt x 43.19637pt.
 
- <./imagens/Video7Inicio.png> <./imagens/Video7Fim.png>] [81
+[80
+
+ <./imagens/Video6Inicio.png> <./imagens/Video6Fim.png>] [81
 
 ] [82
 
-] <imagens/Video8Inicio.png, id=3025, 1261.71375pt x 712.91344pt>
-File: imagens/Video8Inicio.png Graphic file (type png)
+]
+<imagens/Video7Inicio.png, id=3032, 1264.725pt x 711.4078pt>
+File: imagens/Video7Inicio.png Graphic file (type png)
+ <use imagens/Video7Inicio.png>
+Package pdftex.def Info: imagens/Video7Inicio.png used on input line 1115.
+(pdftex.def)             Requested size: 76.82246pt x 43.20367pt.
 
-<use imagens/Video8Inicio.png>
-Package pdftex.def Info: imagens/Video8Inicio.png used on input line 1131.
-(pdftex.def)             Requested size: 76.82246pt x 43.40388pt.
- <imagens/Video8Fim.png, id=3026, 1260.20813pt x 708.39656pt>
-File: imagens/Video8Fim.png Graphic file (type png)
- <use imagens/Video8Fim.png>
-Package pdftex.def Info: imagens/Video8Fim.png used on input line 1131.
-(pdftex.def)             Requested size: 76.82246pt x 43.18294pt.
+<imagens/Video7Fim.png, id=3033, 1259.4553pt x 708.39656pt>
+File: imagens/Video7Fim.png Graphic file (type png)
+ <use imagens/Video7Fim.png>
+Package pdftex.def Info: imagens/Video7Fim.png used on input line 1115.
+(pdftex.def)             Requested size: 76.82246pt x 43.20456pt.
+ [83
 
-[83
-
- <./imagens/Video8Inicio.png> <./imagens/Video8Fim.png>] [84
+ <./imagens/Video7Inicio.png> <./imagens/Video7Fim.png>] [84
 
 ] [85
 
-] (Seminario.toc) [86
+] <imagens/Video8Inicio.png, id=3139, 1261.71375pt x 712.91344pt>
+File: imagens/Video8Inicio.png Graphic file (type png)
 
-] [87
+<use imagens/Video8Inicio.png>
+Package pdftex.def Info: imagens/Video8Inicio.png used on input line 1166.
+(pdftex.def)             Requested size: 76.82246pt x 43.40388pt.
+ <imagens/Video8Fim.png, id=3140, 1260.20813pt x 708.39656pt>
+File: imagens/Video8Fim.png Graphic file (type png)
+ <use imagens/Video8Fim.png>
+Package pdftex.def Info: imagens/Video8Fim.png used on input line 1166.
+(pdftex.def)             Requested size: 76.82246pt x 43.18294pt.
 
-] (Seminario.bbl) [88
+[86
 
-]
-[89
+ <./imagens/Video8Inicio.png> <./imagens/Video8Fim.png>] [87
 
+] [88
+
+] (Seminario.toc) [89
 
 ] [90
 
-
 ] [91
 
-
 ] [92
+
+] (Seminario.bbl) [93
+
+] [94
+
+
+] [95
+
+
+]
+
+Package natbib Warning: Citation `chen2012dynamic' on page 96 undefined on input line 1248.
+
+
+Package natbib Warning: Citation `graciano2007rastreamento' on page 96 undefined on input line 1248.
+
+
+Package natbib Warning: Citation `hai2009self' on page 96 undefined on input line 1248.
+
+[96
 
 ]
 \tf@nav=\write6
@@ -1682,32 +1694,32 @@ Package pdftex.def Info: imagens/Video8Fim.png used on input line 1131.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1200.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1200.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1254.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1254.
 (Seminario.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1200.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1200.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1254.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1254.
 Package rerunfilecheck Info: File `Seminario.out' has not changed.
-(rerunfilecheck)             Checksum: 9696EC00FD88D4ADCEEC8B1434378DEA;397.
+(rerunfilecheck)             Checksum: D3E7E13F9E1136BBA83967CEDDE6FEB8;400.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1200.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1254.
  ) 
 Here is how much of TeX's memory you used:
- 19636 strings out of 493673
- 369964 string characters out of 3141498
- 442719 words of memory out of 3000000
- 22254 multiletter control sequences out of 15000+200000
- 23733 words of font info for 63 fonts, out of 3000000 for 9000
+ 19706 strings out of 493673
+ 370990 string characters out of 3141498
+ 442702 words of memory out of 3000000
+ 22313 multiletter control sequences out of 15000+200000
+ 23748 words of font info for 63 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,19n,68p,390b,692s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Avell G1711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss2074.pk> <C:\Users\Avell G1
-711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0700.pk> <C:\Users\Avell G1711 NEW\AppData\Local
-\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1095.pk> <C:\Users\Avell G1711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecsx1000.pk> <C:\Users\Avell G1711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
+ 56i,19n,68p,452b,692s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Avell G1711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2074.pk> <C:\Users\Avell G1
+711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss2074.pk> <C:\Users\Avell G1711 NEW\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0700.pk> <C:\Users\Avell G1711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecsx1095.pk> <C:\Users\Avell G1711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
 i600\ecsi1440.pk> <C:\Users\Avell G1711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1000.pk> <C:
 \Users\Avell G1711 NEW\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Users\Avell G1711 NE
 W\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1095.pk> <C:\Users\Avell G1711 NEW\AppData\Local\MiKTe
@@ -1721,9 +1733,9 @@ m/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.
 pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Seminario.pdf (92 pages, 24655082 bytes).
+Output written on Seminario.pdf (96 pages, 24600522 bytes).
 PDF statistics:
- 3877 PDF objects out of 4296 (max. 8388607)
- 201 named destinations out of 1000 (max. 500000)
- 378 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4007 PDF objects out of 4296 (max. 8388607)
+ 209 named destinations out of 1000 (max. 500000)
+ 393 words of extra memory for PDF output out of 10000 (max. 10000000)
 
