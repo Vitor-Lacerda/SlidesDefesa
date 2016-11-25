@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.3)  25 NOV 2016 16:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.3)  25 NOV 2016 16:29
 entering extended mode
 **./SeminarioRedux.tex
 (SeminarioRedux.tex
@@ -1469,34 +1469,17 @@ Overfull \vbox (7.95892pt too high) detected at line 273
 
  <./imagens/GLCM.png>] [20
 
+] [21
+
 ]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.297 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 297
-[][]
- []
-
-[21
-
-] <imagens/velocidadevetores.png, id=835, 469.755pt x 268.00125pt>
+<imagens/velocidadevetores.png, id=834, 469.755pt x 268.00125pt>
 File: imagens/velocidadevetores.png Graphic file (type png)
 
 <use imagens/velocidadevetores.png>
 Package pdftex.def Info: imagens/velocidadevetores.png used on input line 314.
 (pdftex.def)             Requested size: 98.33162pt x 56.09789pt.
 
-<imagens/velocidademagnitude.png, id=836, 469.755pt x 272.51813pt>
+<imagens/velocidademagnitude.png, id=835, 469.755pt x 272.51813pt>
 File: imagens/velocidademagnitude.png Graphic file (type png)
 
 <use imagens/velocidademagnitude.png>
@@ -1515,7 +1498,7 @@ rioRedux.toc) [23
 ] [26
 
 ]
-<imagens/ConfusaoRede.png, id=1011, 526.96875pt x 526.96875pt>
+<imagens/ConfusaoRede.png, id=1010, 526.96875pt x 526.96875pt>
 File: imagens/ConfusaoRede.png Graphic file (type png)
 
 <use imagens/ConfusaoRede.png>
@@ -1530,7 +1513,7 @@ Overfull \vbox (13.34099pt too high) detected at line 376
  <./imagens/ConfusaoRede.png (PNG copy)>] (SeminarioRedux.toc) [28
 
 ]
-<imagens/Vazio3.png, id=1085, 1262.46657pt x 709.90219pt>
+<imagens/Vazio3.png, id=1084, 1262.46657pt x 709.90219pt>
 File: imagens/Vazio3.png Graphic file (type png)
 
 <use imagens/Vazio3.png>
@@ -1553,7 +1536,7 @@ Overfull \vbox (11.20241pt too high) detected at line 399
 [30
 
  <./imagens/fluxogramacalibracao.png>]
-<imagens/ROIs.png, id=1153, 845.40843pt x 475.7775pt>
+<imagens/ROIs.png, id=1154, 845.40843pt x 475.7775pt>
 File: imagens/ROIs.png Graphic file (type png)
  <use imagens/ROIs.png>
 Package pdftex.def Info: imagens/ROIs.png used on input line 415.
@@ -1696,7 +1679,7 @@ Package pdftex.def Info: imagens/retanguloMovimento.png used on input line 607.
 ] (SeminarioRedux.toc) [48
 
 ]
-<imagens/instrucoes.png, id=1779, 843.90282pt x 474.27188pt>
+<imagens/instrucoes.png, id=1778, 843.90282pt x 474.27188pt>
 File: imagens/instrucoes.png Graphic file (type png)
 
 <use imagens/instrucoes.png>
@@ -1845,42 +1828,37 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1012.
  ) 
 Here is how much of TeX's memory you used:
- 19691 strings out of 493334
- 372296 string characters out of 3136663
+ 19683 strings out of 493334
+ 372218 string characters out of 3136663
  446670 words of memory out of 3000000
- 22548 multiletter control sequences out of 15000+200000
+ 22542 multiletter control sequences out of 15000+200000
  16766 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,68p,459b,692s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Navigation74} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation76} has been referenced but does not exis
-t, replaced by a fixed one
-
- <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecsx2074.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecss2074.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk
-\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1095.pk> <C:\Users\Infosolo\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0800.pk> <C:\Users\Inf
-osolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk> 
-<C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecss1440.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecss0600.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-si10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss
-i8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on SeminarioRedux.pdf (73 pages, 7049148 bytes).
+ <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecsx2074.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecss2074.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Users\Infosolo\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1095.pk> <C:\Users\Infosolo\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0800.pk> <C:\Users\I
+nfosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk
+> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecss1440.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecss0600.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mssi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ssi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+>
+Output written on SeminarioRedux.pdf (73 pages, 7048896 bytes).
 PDF statistics:
- 2983 PDF objects out of 2984 (max. 8388607)
- 163 named destinations out of 1000 (max. 500000)
+ 2980 PDF objects out of 2984 (max. 8388607)
+ 161 named destinations out of 1000 (max. 500000)
  283 words of extra memory for PDF output out of 10000 (max. 10000000)
 
