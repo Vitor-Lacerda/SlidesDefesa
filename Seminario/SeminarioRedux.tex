@@ -1,0 +1,1019 @@
+
+
+
+\documentclass{beamer}
+
+\mode<presentation>{
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+\usetheme{Warsaw}
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+}
+
+\usepackage[brazil,american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{natbib}
+\usepackage{xcolor,graphicx,url}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+
+\graphicspath{ {imagens/} }
+
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+
+%-----SLIDE DO TITULO-----%
+
+\title[Seminario TG1]{Detecção e monitoramento de vagas de estacionamento através de visão computacional}
+\author{Vitor de Alencastro Lacerda - 11/0067142}
+\institute[UnB]{
+    Universidade de Brasília
+    \medskip
+}
+\date{\today}
+
+%--------------------------%
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Roteiro} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+
+\AtBeginSection[]
+{
+\begin{frame}{Roteiro}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+%-----APRESENTACAO MESMO------%
+
+\section{Problema e motivação}
+
+\begin{frame}
+\frametitle{Problema}
+
+\begin{block}{Problema}
+    Procurar vagas em grandes estacionamentos é uma tarefa dispendiosa e que consome muito tempo.
+\end{block}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Motivações}
+ \begin{itemize}
+   \item Rondar estacionamentos em busca de vagas gasta tempo e dinheiro.
+   \item Sistema atrai clientes para estabelecimentos que o adotarem. 
+   \item  As soluções para estacionamento fechados não são utilizadas nos estacionamentos abertos porque são caras, difíceis de instalar e de difícil escalabilidade.
+   \item  Utilizar algoritmos de visão computacional é uma solução barata, eficiente e eficaz para realizar esse monitoramento.
+     
+ \end{itemize}
+\end{frame}
+
+\section{Objetivos}
+\begin{frame}
+\frametitle{Objetivos}
+\begin{block}{Objetivo Geral}
+Desenvolver um sistema capaz de analisar imagens de uma câmera de vídeo para identificar vagas vazias e ocupadas em um estacionamento descoberto e ajudar motoristas a estacionar seus carros mais rapidamente.
+\end{block}
+
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos}
+Objetivos específicos:
+\begin{itemize}
+  \item Mapear automaticamente as posições das vagas do estacionamento com mínima marcação de humanos.
+  \item Informar aos motoristas a quantidade de vagas livres e ocupadas em uma região do estacionamento.
+  \item Funcionar mesmo se a execução for iniciada em estacionamento ocupado.
+\end{itemize}
+
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos}
+\begin{block}{Resultado Esperado}
+Um sistema barato e eficiente que seja capaz de facilitar a tarefa de encontrar vagas em grandes estacionamentos descobertos, sem o uso de sensores ou necessidade de grandes obras para instalação.
+\end{block}
+\end{frame}
+
+
+\section{Fundamentação Teórica}
+\begin{frame}
+\frametitle{Representação de imagens}
+\begin{itemize}
+  \item É necessário um modelo de representação de imagens em computadores.
+  \item Forma mais simples são imagens de nível de cinza.
+  \item Matriz $MxN$ de elementos de $1 bit$ que representam a luminosidade do \textit{pixel}.
+\end{itemize}
+
+\begin{figure}
+ \centering
+ \begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{ExemploNivelCinza}
+  \caption{}
+  \label{exemplo:sfig2}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{MatrizNivelCinza}
+  \caption{}
+  \label{exemplo:sfig1}
+\end{subfigure}%
+\end{figure}
+
+
+\end{frame}
+\begin{frame}
+\frametitle{Espaços de cor}
+\begin{itemize}
+  \item Modelos de representação de cores.
+  \item RGB e YCbCr.
+  \item Ambos compostos de três canais.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{RGB}
+\begin{itemize}
+  \item Canais vermelho(R), verde(G) e azul(B).
+  \item Matrizes contém fatores de influência de cada cor na imagem final.
+\end{itemize}
+
+	\begin{equation}
+			C_{i,j} = p_{i,j,1} . R + p_{i,j,2} . G + p_{i,j,3} . B ,  (1<i<M, 1<j<N)
+	\label{eq:corRGB}
+	\end{equation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{RGB}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\textwidth]{exemploRGBFinal}
+  \caption{Uma imagem RGB e seus três canais separados.}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{YCbCr}
+\begin{itemize}
+\item Usado em vídeos por sua capacidade de compressão.
+\item Canais de luminância(Y), crominância azul(Cb) e crominância vermelha(Cr).
+\item Pode ser obtida através da imagem RGB.
+\item Canais de crominância são gerados pela diferença entre Y e canais R e B. 
+\end{itemize}
+
+\begin{equation}
+	Y = 0,299.R + 0,587.G + 0,114.B
+\label{eq:Y}
+\end{equation}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{YCbCr}
+\begin{figure}
+ \centering
+ \begin{subfigure}{.2\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{exemploRGB}
+\end{subfigure}\
+\begin{subfigure}{.2\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{exemploycbcr}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\linewidth]{exemploYCbCrFinal}
+  \caption{A imagem YCbCr obtida de uma imagem RGB e seus canais.}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Descritores de textura}
+\begin{block}{}
+Algoritmos que retorna valores que representam padrões de uma imagem analisada. Analisam a imagem como um todo, ao invés de \textit{pixel-a-pixel}.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{GLCM}
+\begin{itemize}
+\item \textit{Gray Level Co-ocurrence Matrix}.
+\item Aplicada em imagens de nível de cinza.
+\item Medidas estatísticas.
+\item Analisa uma certa relação espacial entre dois \textit{pixels}.
+\item Para este trabalho, a relação é a vizinhança direita.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{GLCM}
+\begin{itemize}
+\item Saída do algoritmo é uma matriz $MxM$ onde $M$ é o maior nível de cinza possível.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[width=7cm]{GLCM} 
+\centering
+\caption{Exemplo da elaboração da GLCM. Extraída de https://www.mathworks.com/help/images/ref/graycomatrix.html}
+\label{fig:GLCM}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{GLCM}
+\begin{block}{Medidas}
+\begin{itemize}
+\centering
+\item[Contraste:] $C = \sum_{i,j} (i-j)^{2}P_{(i,j)}$
+\item[Correlação:] $Co = \sum_{i,j} \frac{(i - \mu_i)(j - \mu_j)P_{(i,j)}}{\sigma_i\sigma_j}$
+\item[Energia:]$E = \sum_{i,j} P_{(i,j)}^{2}$
+\item[Homogeneidade:]$H = \sum_{i,j} \frac{P_{(i,j)}}{1+|i-j|}$
+\centering
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de Movimento}
+\begin{block}{Detecção de Movimento}
+Análise da diferença entre dois quadros para estimar a movimentação de objetos na cena.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fluxo óptico}
+\begin{itemize}
+\item Estimativa da velocidade do movimento de cada \textit{pixel} da imagem.
+\item $I(x,y,t) = I(x+dx, y+dy, t+dt)$
+\item Restrição do Fluxo óptico: $\nabla Iv + I_t = 0$.
+\item É preciso analisar a vizinhança para encontrar ambos os componentes de $v$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fluxo óptico}
+\begin{figure}
+ \centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{velocidadevetores}
+	\caption{}
+\end{subfigure}\
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{velocidademagnitude}
+	\caption{}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\section{Redes Neurais Artificiais}
+
+\begin{frame}
+\frametitle{Redes Neurais Artificias}
+\begin{block}{Redes Neurais}
+Sistemas inspirados no cérebro humano para realização de tarefas como classificação de padrões e ajuste de funções. Usam elementos de processamento distintos que trabalham paralelamente(neurônios).
+\end{block}
+
+\begin{block}{Haykin define como:}
+ "...um processador distribuído massivamente paralelo composto por unidades simples de processamento, que possui uma propensidade natural a armazenar conhecimento experimental e torná-lo disponível para uso."
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Neurônio}
+\begin{figure}
+\centering
+\includegraphics[width=.6\textwidth]{neuronio}
+\caption{A estrutura básica de um neurônio humano}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Neurônio Artificial}
+\begin{figure}
+\centering
+\includegraphics[width=.6\textwidth]{NeuronioArtificial}
+\caption{A estrutura básica de um neurônio artificial}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Arquitetura utilizada}
+\begin{itemize}
+	\item Arquitetura \textit{feed-forward}.
+	\item Uma camada oculta com 15 neurônios com função logística.
+	\item Camada de saída com função  \textit{softmax}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Treinamento}
+\begin{itemize}
+	\item Treinamento supervisionado.
+	\item 116 imagens de seções - 57 classe 1(carro) e 59 classe 2(vaga).
+	\item Conjunto de treinamento - 82 imagens.
+	\item Conjunto de validação - 17 imagens.
+	\item Conjunto de testes - 17 imagens.
+	\item Máximo de 1000 iterações.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Confusão}
+\begin{figure}
+\centering
+\includegraphics[width=.6\textwidth]{ConfusaoRede}
+\centering
+\end{figure}
+
+\end{frame}
+
+\section{Solução proposta}
+
+\begin{frame}
+\frametitle{Aquisição}
+    \begin{block}{}
+    Imagens de câmeras montadas em postes de luz ou similar.
+    \end{block}
+\begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{Vazio3}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Calibração}
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{fluxogramacalibracao}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regiões de interesse}
+\begin{block}{}
+\begin{itemize}
+\item Definidas no momento de instalação.
+\item Não devem ter intersecção.
+\item Regiões onde há vagas na imagem.
+\end{itemize} 
+\end{block}
+\begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{ROIs}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Seções verticais}
+\begin{block}{}
+Cada ROI é dividida em um número igual de seções verticais.
+\end{block}
+\begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{Secoes}
+	\centering
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Classificação das seções}
+	A classificação tem 4 etapas:
+   \begin{itemize}
+      \item Extração das características.
+      \item Classificação pela Rede Neural.
+      \item Ajuste pelos vizinhos.
+      \item Sistema de votação
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extração das características}
+Imagens individuais de cada seção são extraídas.
+\begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{imgSecao}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extração das características}
+\begin{itemize}
+\item Medidas GLCM: $\begin{pmatrix}
+	Contraste\\Correlação\\Energia\\Homogeneidade
+	\end{pmatrix}$
+\item Médias dos canais de crominância: $\begin{pmatrix}
+	MCb\\MCr
+	\end{pmatrix}$
+\item Vetor final de entrada: $\begin{pmatrix}
+	Contraste\\Correlação\\Energia\\Homogeneidade\\MCb\\MCr
+	\end{pmatrix}$
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Classificação da Rede Neural Artificial}
+   \begin{itemize}
+   \item Duas classes possíveis: carro(1) ou vaga (2).
+   \item Rede neural recebe vetor de entrada e retorna vetor com probabilidade de cada classe.
+   \end{itemize}
+  \begin{equation}
+	\centering	
+	\begin{pmatrix}
+	P_1\\P_2
+	\end{pmatrix}  
+	\centering
+  \end{equation}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ajuste dos Vizinhos}
+  \begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{Influencia}
+	\centering
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ajuste dos vizinhos}
+
+A classe das seções vizinhas influencia a classificação de uma seção de acordo com as equações:
+
+   \begin{equation}
+	f(s,v) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp^{\frac{-(i_s-i_v)^2}{2\sigma^2}} 
+	\end{equation}
+
+\begin{equation}
+	P_{cv}  = P_{cv}(1+f(s,v))
+\end{equation}
+
+\begin{equation}
+	P_{\overline{cv}}  = P_{\overline{cv}}(1-f(s,v))
+\end{equation}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ajuste dos Vizinhos}
+  Ajuda a evitar erros como este:
+  \begin{figure}
+	\centering
+	\includegraphics[width=.4\textwidth]{erroMeio}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sistema de votação}
+\begin{itemize}
+\item Votação define se a seção está estabilizada ou não.
+\item Voto é baseado no vetor de probabilidades modificado pelo ajuste dos vizinhos.
+\item $voto= 
+\begin{cases}
+    1,& \text{se } P_1 >= 0,6\\
+    2,& \text{caso contrário}
+\end{cases}$.
+\item Seção não muda de classe se estiver estabilizada.
+\item Evitar flutuações na ocupação das seções.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sistema de votação}
+  \begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{fluxogramaVotos}
+	\centering
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Seções classificadas}
+  \begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{Classificada}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de movimento}
+\begin{itemize}
+\item Movimento detectado pela ferramenta do Fluxo Óptico
+\item Resultado: imagem que representa as magnitudes dos vetores velocidade
+\item Essa imagem é limiarizada para eliminar os vetores não significativos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de movimento}
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{fluxogramamovimento}
+	\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de movimento}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{quadroMov}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{mags}
+\end{subfigure}\\
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{limiarizada}
+\end{subfigure}
+\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regiões do movimento}
+\begin{block}{}
+Regiões são detectadas através de análise dos pixels não-pretos da imagem limiarizada.
+\end{block}
+
+\begin{figure}
+\centering
+\includegraphics[width=.4\textwidth]{retanguloMovimento}
+\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mapeamento das vagas}
+\begin{itemize}
+\item No momento inicial da execução conjuntos de seções ocupadas consecutivas formam uma vaga.
+\item Quando um movimento termina, as posições aonde ele acabou e começou são analisadas.
+\item As seções verticais interceptadas pelo movimento nestas posições ficam não-estabilizadas, são reclassificadas e marcadas como uma vaga.
+\item Assume-se que os carros estão parando em vagas corretamente.
+\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Tratamento de intersecção de vagas}
+%\begin{block}{Modo simples}
+%Seções marcadas pelo movimento passam a fazer parte de uma vaga nova, vaga antiga é composta das seções restantes.
+%\end{block}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=.4\textwidth]{umasecao}
+%\centering
+%\end{figure}
+%
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Tratamento de intersecção de vagas}
+%\begin{block}{Modo Complexo}
+%Segue um conjunto mais elaborado de regras:
+%\begin{itemize}
+%\item $S_m \supseteq V \Rightarrow V = S_m$
+%\item $S_m \subset V \Rightarrow V = S_m$. Caso $S_m - V$ seja um conjunto contínuo de um número suficiente de seções, uma nova vaga $V_2$ também é criada.
+%\item Se $S_m \cap V \neq \emptyset$ as seções da intereseção são divididas entre as duas vagas, dando preferência para $S_m$.  
+%\end{itemize}
+%\end{block}
+%\end{frame}
+
+\section{Resultados Experimentais}
+
+\begin{frame}
+\frametitle{Experimentos}
+\begin{itemize}
+\item Oito vídeos curtos com ROIs determinadas previamente divididas em $30$ seções verticais.
+\item Desempenho do programa foi comparado com resultados de três observadores humanos: F, M e P.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{instrucoes}
+\centering
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Experimentos}
+\begin{block}{Ocupação das seções}
+\begin{itemize}
+\item Um acerto ocorre se em um determinado momento $t$, o programa e o observador concordam quanto a ocupação da seção.
+\item $60$ acertos possíveis por segundo.
+\item Taxa de acerto = número total de acertos/acertos possíveis.
+\end{itemize}
+\end{block}
+
+\begin{block}{Vagas ocupadas}
+\begin{itemize}
+\item Um acerto ocorre se em um determinado momento $t$, o programa e o observador concordam quanto ao número de vagas ocupadas.
+\item Número de acertos possíveis é igual a duração do vídeo.
+\item Taxa de acerto = número total de acertos/acertos possíveis.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Vídeo 1}
+	
+	\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline \hline
+Observador & Acertos& Taxa de acertos \\ \hline
+F & 886 & 98,44\% \\  \hline
+P & 886 & 98,44\% \\ \hline
+M & 884 & 98,22\% \\ \hline
+Média & 885,3 & 98,37\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 1}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1 & 7\% \\  \hline
+P & 1 & 7\% \\ \hline
+M & 1 & 7\% \\ \hline
+Média & 1 & 7\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Vídeo 2}
+	
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 586 & 97,66\% \\  \hline
+P & 586 & 97,66\% \\ \hline
+M & 586 & 97,66\% \\ \hline
+Média & 586 & 97,66\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 2}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 10 & 100\% \\  \hline
+P & 10 & 100\% \\ \hline
+M & 10 & 100\% \\ \hline
+Média & 10 & 100\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Vídeo 3}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1165 & 97,08\% \\  \hline
+P & 1113 & 92,75\% \\ \hline
+M & 1136 & 94,66\% \\ \hline
+Média & 1138 & 94,83\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 3}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 19 & 95\% \\  \hline
+P & 11 & 55\% \\ \hline
+M & 18 & 90\% \\ \hline
+Média & 16 & 80\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Vídeo 4}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1750 & 97,22\% \\  \hline
+P & 1749 & 97,16\% \\ \hline
+M & 1772 & 98,44\% \\ \hline
+Média & 1757 & 97,61\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 4}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 22 & 73,33\% \\  \hline
+P & 22 & 73,33\% \\ \hline
+M & 24 & 80\% \\ \hline
+Média & 22,66 & 75,55\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Vídeo 5}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 597 & 99,50\% \\  \hline
+P & 585 & 97,50\% \\ \hline
+M & 587 & 97,83\% \\ \hline
+Média & 1757 & 97,61\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 5}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 10 & 100\% \\  \hline
+P & 9 & 90\% \\ \hline
+M & 10 & 100\% \\ \hline
+Média & 9,66 & 96.66\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Vídeo 6}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 752 & 96,40\% \\  \hline
+P & 774 & 99,23\% \\ \hline
+M & 767 & 98,33\% \\ \hline
+Média & 764,33 & 97,99\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 6}
+
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 10 & 76,92\% \\  \hline
+P & 11 & 84,61\% \\ \hline
+M & 9 & 69,23\% \\ \hline
+Média & 10 & 76,92\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Vídeo 7}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1013 & 99,31\% \\  \hline
+P & 1014 & 99,41\% \\ \hline
+M & 1016 & 99,60\% \\ \hline
+Média & 1014,33 & 99,44\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 7}
+
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 16 & 94,11\% \\  \hline
+P & 16 & 94,11\% \\ \hline
+M & 17 & 100\% \\ \hline
+Média & 16,33 & 96,07\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Vídeo 8}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - seções}  \\ \hline\hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 1376 & 99,71\% \\  \hline
+P & 1379 & 99,92\% \\ \hline
+M & 1379 & 99,92\% \\ \hline
+Média & 1378 & 99,85\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vídeo 8}
+\begin{center}
+\begin{tabular}{|c||c||c|}
+\hline
+\multicolumn{3}{|c|}{Acertos - vagas}  \\ \hline \hline
+Observador & Acertos & Taxa de acertos \\ \hline
+F & 23 & 100\% \\  \hline
+P & 23 & 100\% \\ \hline
+M & 23 & 100\% \\ \hline
+Média & 23 & 100\% \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+
+
+\section{Conclusão}
+\begin{frame}
+\frametitle{Conclusão}
+
+\begin{itemize}
+	\item Procurar por vagas em estacionamentos custa tempo e dinheiro.
+	\item Para estacionamentos descobertos, soluções que utilizam vídeo são mais adequadas.
+	\item O trabalho apresentado analisa vídeos de câmeras montadas em postes de luz para determinar a ocupação das vagas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusão}
+	\begin{itemize}
+		\item Resultados semelhantes aos dos observadores na maior parte dos casos.
+		\item Resistente a erros pontuais de classificação da rede.
+		\item Dificuldades em classificação de veículos com coloração semelhante ao asfalto.
+		\item Algumas falhas no mapeamento causadas por inconsistências no tamanho dos carros.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusão}
+	\begin{block}{}
+		Por fim, o programa se mostrou capaz de ajudar de maneira simples os motoristas a encontrarem vagas em estacionamentos descobertos e de suprir a demanda por uma solução adequada para estes estacionamentos. No futuro porém, é necessário um refinamento do mapeamento e uma evolução do sistema para que seja capaz de analisar corretamente imagens capturadas por câmeras instaladas em posições mais oblíquas ao estacionamento.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Trabalhos futuros}
+\begin{figure}
+\centering
+\includegraphics[height=.8\textheight]{preliminar}
+\centering
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{Referencias}
+\bibliographystyle{plain}
+\bibliography{bibliografia}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Conclusao}
+\huge
+\cite{bong2008integrated} \cite{chen2012dynamic} \cite{de2006introduccao} \cite{delibaltov2013parking}\cite{gonzalez2009digital}
+\cite{graciano2007rastreamento} \cite{hai2009self} \cite{IBGE2000introducao} \cite{idris09} \cite{marques1999processamento}
+\cite{true2007vacant} \cite{vkl1989jain}
+\end{frame}
+
+
+%------------------------------%
+
+
+\end{document} 
