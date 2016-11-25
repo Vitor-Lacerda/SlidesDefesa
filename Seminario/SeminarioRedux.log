@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.3)  25 NOV 2016 15:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.3)  25 NOV 2016 16:12
 entering extended mode
 **./SeminarioRedux.tex
 (SeminarioRedux.tex
@@ -1469,250 +1469,252 @@ Overfull \vbox (7.95892pt too high) detected at line 273
 
  <./imagens/GLCM.png>] [20
 
-] [21
-
-] [22
-
 ]
-<imagens/velocidadevetores.png, id=867, 469.755pt x 268.00125pt>
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 297
+[][]
+ []
+
+[21
+
+] <imagens/velocidadevetores.png, id=835, 469.755pt x 268.00125pt>
 File: imagens/velocidadevetores.png Graphic file (type png)
 
 <use imagens/velocidadevetores.png>
-Package pdftex.def Info: imagens/velocidadevetores.png used on input line 321.
+Package pdftex.def Info: imagens/velocidadevetores.png used on input line 314.
 (pdftex.def)             Requested size: 98.33162pt x 56.09789pt.
 
-<imagens/velocidademagnitude.png, id=868, 469.755pt x 272.51813pt>
+<imagens/velocidademagnitude.png, id=836, 469.755pt x 272.51813pt>
 File: imagens/velocidademagnitude.png Graphic file (type png)
 
 <use imagens/velocidademagnitude.png>
-Package pdftex.def Info: imagens/velocidademagnitude.png used on input line 321
+Package pdftex.def Info: imagens/velocidademagnitude.png used on input line 314
 .
 (pdftex.def)             Requested size: 98.33162pt x 57.04337pt.
- [23
+ [22
 
  <./imagens/velocidadevetores.png> <./imagens/velocidademagnitude.png>] (Semina
-rioRedux.toc) [24
+rioRedux.toc) [23
+
+] [24
 
 ] [25
 
+] [26
+
 ]
-<imagens/neuronio.jpg, id=978, 192.72pt x 116.5956pt>
-File: imagens/neuronio.jpg Graphic file (type jpg)
-
-<use imagens/neuronio.jpg>
-Package pdftex.def Info: imagens/neuronio.jpg used on input line 343.
-(pdftex.def)             Requested size: 184.3758pt x 111.5462pt.
- [26
-
- <./imagens/neuronio.jpg>]
-<imagens/NeuronioArtificial.png, id=1012, 602.25pt x 451.6875pt>
-File: imagens/NeuronioArtificial.png Graphic file (type png)
-
-<use imagens/NeuronioArtificial.png>
-Package pdftex.def Info: imagens/NeuronioArtificial.png used on input line 352.
-
-(pdftex.def)             Requested size: 184.3758pt x 138.28484pt.
- [27
-
- <./imagens/NeuronioArtificial.png>]
-[28
-
-] [29
-
-] <imagens/ConfusaoRede.png, id=1111, 526.96875pt x 526.96875pt>
+<imagens/ConfusaoRede.png, id=1011, 526.96875pt x 526.96875pt>
 File: imagens/ConfusaoRede.png Graphic file (type png)
 
 <use imagens/ConfusaoRede.png>
-Package pdftex.def Info: imagens/ConfusaoRede.png used on input line 383.
+Package pdftex.def Info: imagens/ConfusaoRede.png used on input line 376.
 (pdftex.def)             Requested size: 184.3758pt x 184.37749pt.
 
-Overfull \vbox (13.34099pt too high) detected at line 383
+Overfull \vbox (13.34099pt too high) detected at line 376
+ []
+
+[27
+
+ <./imagens/ConfusaoRede.png (PNG copy)>] (SeminarioRedux.toc) [28
+
+]
+<imagens/Vazio3.png, id=1085, 1262.46657pt x 709.90219pt>
+File: imagens/Vazio3.png Graphic file (type png)
+
+<use imagens/Vazio3.png>
+Package pdftex.def Info: imagens/Vazio3.png used on input line 390.
+(pdftex.def)             Requested size: 122.91406pt x 69.10956pt.
+ [29
+
+ <./imagens/Vazio3.png>]
+<imagens/fluxogramacalibracao.png, id=1119, 258.9675pt x 191.9672pt>
+File: imagens/fluxogramacalibracao.png Graphic file (type png)
+
+<use imagens/fluxogramacalibracao.png>
+Package pdftex.def Info: imagens/fluxogramacalibracao.png used on input line 39
+9.
+(pdftex.def)             Requested size: 245.83282pt x 182.2389pt.
+
+Overfull \vbox (11.20241pt too high) detected at line 399
  []
 
 [30
 
- <./imagens/ConfusaoRede.png (PNG copy)>] (SeminarioRedux.toc) [31
-
-]
-<imagens/Vazio3.png, id=1186, 1262.46657pt x 709.90219pt>
-File: imagens/Vazio3.png Graphic file (type png)
-
-<use imagens/Vazio3.png>
-Package pdftex.def Info: imagens/Vazio3.png used on input line 397.
-(pdftex.def)             Requested size: 122.91406pt x 69.10956pt.
- [32
-
- <./imagens/Vazio3.png>]
-<imagens/fluxogramacalibracao.png, id=1221, 258.9675pt x 191.9672pt>
-File: imagens/fluxogramacalibracao.png Graphic file (type png)
-
-<use imagens/fluxogramacalibracao.png>
-Package pdftex.def Info: imagens/fluxogramacalibracao.png used on input line 40
-6.
-(pdftex.def)             Requested size: 245.83282pt x 182.2389pt.
-
-Overfull \vbox (11.20241pt too high) detected at line 406
- []
-
-[33
-
  <./imagens/fluxogramacalibracao.png>]
-<imagens/ROIs.png, id=1256, 845.40843pt x 475.7775pt>
+<imagens/ROIs.png, id=1153, 845.40843pt x 475.7775pt>
 File: imagens/ROIs.png Graphic file (type png)
  <use imagens/ROIs.png>
-Package pdftex.def Info: imagens/ROIs.png used on input line 422.
+Package pdftex.def Info: imagens/ROIs.png used on input line 415.
 (pdftex.def)             Requested size: 122.91406pt x 69.17108pt.
 
-[34
+[31
 
  <./imagens/ROIs.png>]
-<imagens/Secoes.png, id=1291, 843.90282pt x 474.27188pt>
+<imagens/Secoes.png, id=1190, 843.90282pt x 474.27188pt>
 File: imagens/Secoes.png Graphic file (type png)
 
 <use imagens/Secoes.png>
-Package pdftex.def Info: imagens/Secoes.png used on input line 435.
+Package pdftex.def Info: imagens/Secoes.png used on input line 428.
 (pdftex.def)             Requested size: 122.91406pt x 69.07523pt.
- [35
+ [32
 
- <./imagens/Secoes.png>] [36
+ <./imagens/Secoes.png>] [33
 
 ]
-<imagens/imgSecao.png, id=1359, 152.06813pt x 225.09094pt>
+<imagens/imgSecao.png, id=1258, 152.06813pt x 225.09094pt>
 File: imagens/imgSecao.png Graphic file (type png)
 
 <use imagens/imgSecao.png>
-Package pdftex.def Info: imagens/imgSecao.png used on input line 457.
+Package pdftex.def Info: imagens/imgSecao.png used on input line 450.
 (pdftex.def)             Requested size: 122.91406pt x 181.9414pt.
 
-Overfull \vbox (26.63354pt too high) detected at line 457
+Overfull \vbox (26.63354pt too high) detected at line 450
  []
 
-[37
+[34
 
  <./imagens/imgSecao.png (PNG copy)>]
 
-LaTeX Warning: Command \c invalid in math mode on input line 473.
+LaTeX Warning: Command \c invalid in math mode on input line 466.
 
 
-LaTeX Warning: Command \~ invalid in math mode on input line 473.
-
-Missing character: There is no ç in font cmss10!
-Missing character: There is no ã in font cmss10!
-
-LaTeX Warning: Command \c invalid in math mode on input line 473.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 473.
+LaTeX Warning: Command \~ invalid in math mode on input line 466.
 
 Missing character: There is no ç in font cmss10!
 Missing character: There is no ã in font cmss10!
-[38
 
-] [39
+LaTeX Warning: Command \c invalid in math mode on input line 466.
 
-] <imagens/Influencia.png, id=1460, 149.05687pt x 153.57375pt>
+
+LaTeX Warning: Command \~ invalid in math mode on input line 466.
+
+Missing character: There is no ç in font cmss10!
+Missing character: There is no ã in font cmss10!
+[35
+
+] [36
+
+] <imagens/Influencia.png, id=1358, 149.05687pt x 153.57375pt>
 File: imagens/Influencia.png Graphic file (type png)
 
 <use imagens/Influencia.png>
-Package pdftex.def Info: imagens/Influencia.png used on input line 500.
+Package pdftex.def Info: imagens/Influencia.png used on input line 493.
 (pdftex.def)             Requested size: 122.91406pt x 126.63896pt.
- [40
+ [37
 
- <./imagens/Influencia.png>] [41
+ <./imagens/Influencia.png>] [38
 
 ]
-<imagens/erroMeio.png, id=1529, 840.89156pt x 471.26062pt>
+<imagens/erroMeio.png, id=1428, 840.89156pt x 471.26062pt>
 File: imagens/erroMeio.png Graphic file (type png)
 
 <use imagens/erroMeio.png>
-Package pdftex.def Info: imagens/erroMeio.png used on input line 529.
+Package pdftex.def Info: imagens/erroMeio.png used on input line 522.
 (pdftex.def)             Requested size: 122.91406pt x 68.88113pt.
- [42
+ [39
 
- <./imagens/erroMeio.png>] [43
+ <./imagens/erroMeio.png>] [40
 
 ]
-<imagens/fluxogramaVotos.png, id=1598, 553.31718pt x 233.37187pt>
+<imagens/fluxogramaVotos.png, id=1496, 553.31718pt x 233.37187pt>
 File: imagens/fluxogramaVotos.png Graphic file (type png)
 
 <use imagens/fluxogramaVotos.png>
-Package pdftex.def Info: imagens/fluxogramaVotos.png used on input line 554.
+Package pdftex.def Info: imagens/fluxogramaVotos.png used on input line 547.
 (pdftex.def)             Requested size: 245.83282pt x 103.68456pt.
- [44
+ [41
 
  <./imagens/fluxogramaVotos.png>]
-<imagens/Classificada.png, id=1633, 841.64438pt x 475.02469pt>
+<imagens/Classificada.png, id=1531, 841.64438pt x 475.02469pt>
 File: imagens/Classificada.png Graphic file (type png)
 
 <use imagens/Classificada.png>
-Package pdftex.def Info: imagens/Classificada.png used on input line 563.
+Package pdftex.def Info: imagens/Classificada.png used on input line 556.
 (pdftex.def)             Requested size: 245.83282pt x 138.74664pt.
- [45
+ [42
 
- <./imagens/Classificada.png>] [46
+ <./imagens/Classificada.png>] [43
 
 ]
-<imagens/fluxogramamovimento.png, id=1701, 574.39594pt x 264.23718pt>
+<imagens/fluxogramamovimento.png, id=1600, 574.39594pt x 264.23718pt>
 File: imagens/fluxogramamovimento.png Graphic file (type png)
 
 <use imagens/fluxogramamovimento.png>
-Package pdftex.def Info: imagens/fluxogramamovimento.png used on input line 581
+Package pdftex.def Info: imagens/fluxogramamovimento.png used on input line 574
 .
 (pdftex.def)             Requested size: 245.83282pt x 113.08755pt.
- [47
+ [44
 
  <./imagens/fluxogramamovimento.png>]
-<imagens/quadroMov.png, id=1736, 857.2025pt x 481.8pt>
+<imagens/quadroMov.png, id=1635, 857.2025pt x 481.8pt>
 File: imagens/quadroMov.png Graphic file (type png)
 
 <use imagens/quadroMov.png>
-Package pdftex.def Info: imagens/quadroMov.png used on input line 601.
+Package pdftex.def Info: imagens/quadroMov.png used on input line 594.
 (pdftex.def)             Requested size: 122.9164pt x 69.0836pt.
- <imagens/mags.png, id=1737, 857.2025pt x 481.8pt>
+ <imagens/mags.png, id=1636, 857.2025pt x 481.8pt>
 File: imagens/mags.png Graphic file (type png)
 
 <use imagens/mags.png>
-Package pdftex.def Info: imagens/mags.png used on input line 601.
+Package pdftex.def Info: imagens/mags.png used on input line 594.
 (pdftex.def)             Requested size: 122.9164pt x 69.0836pt.
 
-<imagens/limiarizada.png, id=1738, 857.2025pt x 481.8pt>
+<imagens/limiarizada.png, id=1637, 857.2025pt x 481.8pt>
 File: imagens/limiarizada.png Graphic file (type png)
 
 <use imagens/limiarizada.png>
-Package pdftex.def Info: imagens/limiarizada.png used on input line 601.
+Package pdftex.def Info: imagens/limiarizada.png used on input line 594.
 (pdftex.def)             Requested size: 122.9164pt x 69.0836pt.
- [48
+ [45
 
  <./imagens/quadroMov.png (PNG copy)> <./imagens/mags.png (PNG copy)> <./imagen
 s/limiarizada.png (PNG copy)>]
-<imagens/retanguloMovimento.png, id=1772, 644.4075pt x 363.60844pt>
+<imagens/retanguloMovimento.png, id=1671, 644.4075pt x 363.60844pt>
 File: imagens/retanguloMovimento.png Graphic file (type png)
 
 <use imagens/retanguloMovimento.png>
-Package pdftex.def Info: imagens/retanguloMovimento.png used on input line 614.
+Package pdftex.def Info: imagens/retanguloMovimento.png used on input line 607.
 
 (pdftex.def)             Requested size: 122.91406pt x 69.35263pt.
- [49
+ [46
 
  <./imagens/retanguloMovimento.png>]
-[50
+[47
 
-] (SeminarioRedux.toc) [51
+] (SeminarioRedux.toc) [48
 
 ]
-<imagens/instrucoes.png, id=1880, 843.90282pt x 474.27188pt>
+<imagens/instrucoes.png, id=1779, 843.90282pt x 474.27188pt>
 File: imagens/instrucoes.png Graphic file (type png)
 
 <use imagens/instrucoes.png>
-Package pdftex.def Info: imagens/instrucoes.png used on input line 666.
+Package pdftex.def Info: imagens/instrucoes.png used on input line 659.
 (pdftex.def)             Requested size: 113.81102pt x 63.9588pt.
- [52
+ [49
 
  <./imagens/instrucoes.png>]
-Overfull \vbox (22.51974pt too high) detected at line 685
+Overfull \vbox (22.51974pt too high) detected at line 678
  []
 
-[53
+[50
+
+] [51
+
+] [52
+
+] [53
 
 ] [54
 
@@ -1736,88 +1738,82 @@ Overfull \vbox (22.51974pt too high) detected at line 685
 
 ] [64
 
-] [65
+]
+[65
 
 ] [66
 
-] [67
+] (SeminarioRedux.toc) [67
 
-]
-[68
+] [68
 
 ] [69
 
-] (SeminarioRedux.toc) [70
-
-] [71
-
-] [72
-
-] [73
+] [70
 
 ]
-<imagens/preliminar.png, id=2616, 483.30562pt x 362.85562pt>
+<imagens/preliminar.png, id=2514, 483.30562pt x 362.85562pt>
 File: imagens/preliminar.png Graphic file (type png)
 
 <use imagens/preliminar.png>
-Package pdftex.def Info: imagens/preliminar.png used on input line 994.
+Package pdftex.def Info: imagens/preliminar.png used on input line 987.
 (pdftex.def)             Requested size: 220.87048pt x 165.82152pt.
- [74
+ [71
 
  <./imagens/preliminar.png>]
 No file SeminarioRedux.bbl.
-[75
+[72
 
 ]
 
-Package natbib Warning: Citation `bong2008integrated' on page 76 undefined on i
-nput line 1013.
+Package natbib Warning: Citation `bong2008integrated' on page 73 undefined on i
+nput line 1006.
 
 
-Package natbib Warning: Citation `chen2012dynamic' on page 76 undefined on inpu
-t line 1013.
+Package natbib Warning: Citation `chen2012dynamic' on page 73 undefined on inpu
+t line 1006.
 
 
-Package natbib Warning: Citation `de2006introduccao' on page 76 undefined on in
-put line 1013.
+Package natbib Warning: Citation `de2006introduccao' on page 73 undefined on in
+put line 1006.
 
 
-Package natbib Warning: Citation `delibaltov2013parking' on page 76 undefined o
-n input line 1013.
+Package natbib Warning: Citation `delibaltov2013parking' on page 73 undefined o
+n input line 1006.
 
 
-Package natbib Warning: Citation `gonzalez2009digital' on page 76 undefined on 
-input line 1013.
+Package natbib Warning: Citation `gonzalez2009digital' on page 73 undefined on 
+input line 1006.
 
 
-Package natbib Warning: Citation `graciano2007rastreamento' on page 76 undefine
-d on input line 1013.
+Package natbib Warning: Citation `graciano2007rastreamento' on page 73 undefine
+d on input line 1006.
 
 
-Package natbib Warning: Citation `hai2009self' on page 76 undefined on input li
-ne 1013.
+Package natbib Warning: Citation `hai2009self' on page 73 undefined on input li
+ne 1006.
 
 
-Package natbib Warning: Citation `IBGE2000introducao' on page 76 undefined on i
-nput line 1013.
+Package natbib Warning: Citation `IBGE2000introducao' on page 73 undefined on i
+nput line 1006.
 
 
-Package natbib Warning: Citation `idris09' on page 76 undefined on input line 1
-013.
+Package natbib Warning: Citation `idris09' on page 73 undefined on input line 1
+006.
 
 
-Package natbib Warning: Citation `marques1999processamento' on page 76 undefine
-d on input line 1013.
+Package natbib Warning: Citation `marques1999processamento' on page 73 undefine
+d on input line 1006.
 
 
-Package natbib Warning: Citation `true2007vacant' on page 76 undefined on input
- line 1013.
+Package natbib Warning: Citation `true2007vacant' on page 73 undefined on input
+ line 1006.
 
 
-Package natbib Warning: Citation `vkl1989jain' on page 76 undefined on input li
-ne 1013.
+Package natbib Warning: Citation `vkl1989jain' on page 73 undefined on input li
+ne 1006.
 
-[76
+[73
 
 ]
 \tf@nav=\write6
@@ -1833,11 +1829,11 @@ ne 1013.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1019.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1019.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1012.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1012.
 (SeminarioRedux.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1019.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1019.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1012.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1012.
 
 Package rerunfilecheck Info: File `SeminarioRedux.out' has not changed.
 (rerunfilecheck)             Checksum: D3E7E13F9E1136BBA83967CEDDE6FEB8;400.
@@ -1846,40 +1842,45 @@ Package rerunfilecheck Info: File `SeminarioRedux.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1019.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1012.
  ) 
 Here is how much of TeX's memory you used:
- 19704 strings out of 493334
- 372587 string characters out of 3136663
+ 19691 strings out of 493334
+ 372296 string characters out of 3136663
  446670 words of memory out of 3000000
- 22554 multiletter control sequences out of 15000+200000
+ 22548 multiletter control sequences out of 15000+200000
  16766 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,68p,459b,692s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecsx2074.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ecss2074.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Users\Infosolo\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1095.pk> <C:\Users\Infosolo\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0800.pk> <C:\Users\I
-nfosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk
-> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecss1440.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
-ppen\ec\dpi600\ecss0600.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mssi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-ssi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
->
-Output written on SeminarioRedux.pdf (76 pages, 7107540 bytes).
+pdfTeX warning (dest): name{Navigation74} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Navigation76} has been referenced but does not exis
+t, replaced by a fixed one
+
+ <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecsx2074.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecss2074.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1095.pk> <C:\Users\Infosolo\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0800.pk> <C:\Users\Inf
+osolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk> 
+<C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecss1440.pk> <C:\Users\Infosolo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecss0600.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+si10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss
+i8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on SeminarioRedux.pdf (73 pages, 7049148 bytes).
 PDF statistics:
- 3086 PDF objects out of 3580 (max. 8388607)
- 167 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2983 PDF objects out of 2984 (max. 8388607)
+ 163 named destinations out of 1000 (max. 500000)
+ 283 words of extra memory for PDF output out of 10000 (max. 10000000)
 

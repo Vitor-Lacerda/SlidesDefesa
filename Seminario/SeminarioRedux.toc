@@ -3,7 +3,7 @@
 \beamer@sectionintoc {1}{Problema e motiva\IeC {\c c}\IeC {\~a}o}{3}{0}{1}
 \beamer@sectionintoc {2}{Objetivos}{6}{0}{2}
 \beamer@sectionintoc {3}{Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}{10}{0}{3}
-\beamer@sectionintoc {4}{Redes Neurais Artificiais}{24}{0}{4}
-\beamer@sectionintoc {5}{Solu\IeC {\c c}\IeC {\~a}o proposta}{31}{0}{5}
-\beamer@sectionintoc {6}{Resultados Experimentais}{51}{0}{6}
-\beamer@sectionintoc {7}{Conclus\IeC {\~a}o}{70}{0}{7}
+\beamer@sectionintoc {4}{Redes Neurais Artificiais}{23}{0}{4}
+\beamer@sectionintoc {5}{Solu\IeC {\c c}\IeC {\~a}o proposta}{28}{0}{5}
+\beamer@sectionintoc {6}{Resultados Experimentais}{48}{0}{6}
+\beamer@sectionintoc {7}{Conclus\IeC {\~a}o}{67}{0}{7}
