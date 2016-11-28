@@ -6,4 +6,3 @@
 \beamer@sectionintoc {4}{Redes Neurais Artificiais}{23}{0}{4}
 \beamer@sectionintoc {5}{Solu\IeC {\c c}\IeC {\~a}o proposta}{28}{0}{5}
 \beamer@sectionintoc {6}{Resultados Experimentais}{45}{0}{6}
-\beamer@sectionintoc {7}{Conclus\IeC {\~a}o}{64}{0}{7}
